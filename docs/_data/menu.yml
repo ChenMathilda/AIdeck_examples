@@ -1,0 +1,25 @@
+- page_id: home
+- title: Getting Started
+  subs:
+      - {page_id: getting-started}
+      - {page_id: tryout}
+      - {page_id: docker-gap8}
+      - {page_id: jtag-programming}
+- title: Guides
+  subs:
+      - {page_id: replace-ai-deck-camera}
+- title: Test functions
+  subs:
+      - {page_id: test-camera}
+      - {page_id: uart-send-char}
+      - {page_id: wifi-streamer}
+- title: Image Processing examples
+  subs:
+      - {page_id: face-detection}
+- title: AI examples
+  subs:
+      - {page_id: gapflow-model-extern}
+- title: NINA instructions
+  subs:
+      - {page_id: nina-flash-instructions}
+      - {page_id: docker-nina}

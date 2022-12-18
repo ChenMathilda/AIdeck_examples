@@ -1,0 +1,4421 @@
+{
+  "identity": {
+    "filename": "/module/data/BUILD_MODEL_SQ8BIT/model.tflite",
+    "fusions": [
+      "std_match_group"
+    ],
+    "is_adjusted": true,
+    "quantization_type": "SQ8"
+  },
+  "info": {
+    "quantization": {
+      "__type": "JsonSerializable",
+      "__module_name": "quantization.quantization_set",
+      "__class_name": "QuantizationSet",
+      "__contents": {
+        "unwrap": false,
+        "qset": {
+          "NodeId_input_1###": {
+            "__type": "JsonSerializable",
+            "__module_name": "quantization.multiplicative.mult_quantization",
+            "__class_name": "MultQuantizationRecord",
+            "__contents": {
+              "out_qs": [
+                {
+                  "__type": "JsonSerializable",
+                  "__module_name": "quantization.multiplicative.asymmetric.asymmetric_mult_qtype",
+                  "__class_name": "AsymmetricMultQType",
+                  "__contents": {
+                    "min_val": null,
+                    "max_val": null,
+                    "scale": {
+                      "__type": "numpy.ndarray",
+                      "__contents": [
+                        1
+                      ],
+                      "__dtype": "int64"
+                    },
+                    "zero_point": {
+                      "__type": "numpy.ndarray",
+                      "__contents": [
+                        0
+                      ],
+                      "__dtype": "int64"
+                    },
+                    "dim": 0,
+                    "dtype": "uint8"
+                  }
+                }
+              ],
+              "in_qs": [
+                {
+                  "__type": "JsonSerializable",
+                  "__module_name": "quantization.multiplicative.asymmetric.asymmetric_mult_qtype",
+                  "__class_name": "AsymmetricMultQType",
+                  "__contents": {
+                    "min_val": null,
+                    "max_val": null,
+                    "scale": {
+                      "__type": "numpy.ndarray",
+                      "__contents": [
+                        1
+                      ],
+                      "__dtype": "int64"
+                    },
+                    "zero_point": {
+                      "__type": "numpy.ndarray",
+                      "__contents": [
+                        0
+                      ],
+                      "__dtype": "int64"
+                    },
+                    "dim": 0,
+                    "dtype": "uint8"
+                  }
+                }
+              ],
+              "quant_mode": "symmetric",
+              "scale_mul_biases_q": null
+            }
+          },
+          "NodeId_DEPTHWISE_CONV_2D_0_0_fusion###DEPTHWISE_CONV_2D_0_0": {
+            "__type": "JsonSerializable",
+            "__module_name": "quantization.multiplicative.mult_quantization",
+            "__class_name": "MultScalableFilterQuantizationRecord",
+            "__contents": {
+              "out_qs": [
+                {
+                  "__type": "JsonSerializable",
+                  "__module_name": "quantization.multiplicative.symmetric.symmetric_mult_qtype",
+                  "__class_name": "SymmetricMultQType",
+                  "__contents": {
+                    "min_val": {
+                      "__type": "numpy.ndarray",
+                      "__contents": [
+                        -2.544301986694336
+                      ],
+                      "__dtype": "float32"
+                    },
+                    "max_val": {
+                      "__type": "numpy.ndarray",
+                      "__contents": [
+                        2.5244245529174805
+                      ],
+                      "__dtype": "float32"
+                    },
+                    "scale": {
+                      "__type": "numpy.ndarray",
+                      "__contents": [
+                        0.0198773592710495
+                      ],
+                      "__dtype": "float32"
+                    },
+                    "dim": null,
+                    "narrow_range": false,
+                    "dtype": "int8"
+                  }
+                }
+              ],
+              "constants_are_quantized": false,
+              "in_qs": [
+                {
+                  "__type": "JsonSerializable",
+                  "__module_name": "quantization.multiplicative.symmetric.symmetric_mult_qtype",
+                  "__class_name": "SymmetricMultQType",
+                  "__contents": {
+                    "min_val": {
+                      "__type": "numpy.ndarray",
+                      "__contents": [
+                        -1.0
+                      ],
+                      "__dtype": "float64"
+                    },
+                    "max_val": {
+                      "__type": "numpy.ndarray",
+                      "__contents": [
+                        0.9921875
+                      ],
+                      "__dtype": "float64"
+                    },
+                    "scale": {
+                      "__type": "numpy.ndarray",
+                      "__contents": [
+                        0.0078125
+                      ],
+                      "__dtype": "float64"
+                    },
+                    "dim": null,
+                    "narrow_range": false,
+                    "dtype": "int8"
+                  }
+                }
+              ],
+              "quant_mode": "symmetric",
+              "scale_mul_biases_q": null,
+              "calc_q": null,
+              "acc_q": null,
+              "biases_q": {
+                "__type": "JsonSerializable",
+                "__module_name": "quantization.multiplicative.symmetric.symmetric_mult_biases_qtype",
+                "__class_name": "SymmetricMultBiasesQType",
+                "__contents": {
+                  "min_val": null,
+                  "max_val": null,
+                  "scale": {
+                    "__type": "numpy.ndarray",
+                    "__contents": [
+                      1.480626997363288e-05,
+                      2.4885395760065876e-05,
+                      1.786885150067974e-05,
+                      1.1886098036484327e-05,
+                      2.093064904329367e-05,
+                      1.5934310795273632e-05,
+                      2.5863660994218662e-05,
+                      1.67766756931087e-05,
+                      1.1186135452589951e-05,
+                      2.4717102860449813e-05,
+                      1.7131180356955156e-05,
+                      1.078790046449285e-05,
+                      1.63152417371748e-05,
+                      2.034196768363472e-05,
+                      1.7323798601864837e-05,
+                      2.6410421924083494e-05,
+                      1.5421343050547875e-05,
+                      1.09795282696723e-05,
+                      1.1113044820376672e-05,
+                      1.929597965499852e-05,
+                      6.7898536144639365e-06,
+                      1.9154029359924607e-05,
+                      2.380112709943205e-05,
+                      2.0471359675866552e-05,
+                      2.656035212567076e-05,
+                      8.338475709024351e-06,
+                      1.9527522454154678e-05,
+                      8.560006790503394e-06,
+                      1.835130933613982e-05,
+                      2.2247444576350972e-05,
+                      1.3694401786779054e-05,
+                      1.2795353541150689e-05
+                    ],
+                    "__dtype": "float64"
+                  },
+                  "set_scale": {
+                    "__type": "numpy.ndarray",
+                    "__contents": [
+                      1.480626997363288e-05,
+                      2.4885395760065876e-05,
+                      1.786885150067974e-05,
+                      1.1886098036484327e-05,
+                      2.093064904329367e-05,
+                      1.5934310795273632e-05,
+                      2.5863660994218662e-05,
+                      1.67766756931087e-05,
+                      1.1186135452589951e-05,
+                      2.4717102860449813e-05,
+                      1.7131180356955156e-05,
+                      1.078790046449285e-05,
+                      1.63152417371748e-05,
+                      2.034196768363472e-05,
+                      1.7323798601864837e-05,
+                      2.6410421924083494e-05,
+                      1.5421343050547875e-05,
+                      1.09795282696723e-05,
+                      1.1113044820376672e-05,
+                      1.929597965499852e-05,
+                      6.7898536144639365e-06,
+                      1.9154029359924607e-05,
+                      2.380112709943205e-05,
+                      2.0471359675866552e-05,
+                      2.656035212567076e-05,
+                      8.338475709024351e-06,
+                      1.9527522454154678e-05,
+                      8.560006790503394e-06,
+                      1.835130933613982e-05,
+                      2.2247444576350972e-05,
+                      1.3694401786779054e-05,
+                      1.2795353541150689e-05
+                    ],
+                    "__dtype": "float64"
+                  },
+                  "dim": 0,
+                  "narrow_range": false,
+                  "dtype": "int32"
+                }
+              },
+              "weights_q": {
+                "__type": "JsonSerializable",
+                "__module_name": "quantization.multiplicative.symmetric.symmetric_mult_qtype",
+                "__class_name": "SymmetricMultQType",
+                "__contents": {
+                  "min_val": {
+                    "__type": "numpy.ndarray",
+                    "__contents": [
+                      -0.24069072306156158,
+                      -0.40453699231147766,
+                      -0.2904760539531708,
+                      -0.19322040677070618,
+                      -0.34024864435195923,
+                      -0.2590281665325165,
+                      -0.4204396605491638,
+                      -0.27272164821624756,
+                      -0.18184182047843933,
+                      -0.4018012285232544,
+                      -0.2784844636917114,
+                      -0.17536811530590057,
+                      -0.265220582485199,
+                      -0.3306790292263031,
+                      -0.281615674495697,
+                      -0.4293278157711029,
+                      -0.2506893575191498,
+                      -0.17848321795463562,
+                      -0.1806536614894867,
+                      -0.3136754333972931,
+                      -0.11037585884332657,
+                      -0.3113678991794586,
+                      -0.3869111239910126,
+                      -0.33278241753578186,
+                      -0.431765079498291,
+                      -0.13555026054382324,
+                      -0.31743940711021423,
+                      -0.139151468873024,
+                      -0.29831889271736145,
+                      -0.36165446043014526,
+                      -0.22261619567871094,
+                      -0.2080012708902359
+                    ],
+                    "__dtype": "float32"
+                  },
+                  "max_val": {
+                    "__type": "numpy.ndarray",
+                    "__contents": [
+                      0.24069072306156158,
+                      0.40453699231147766,
+                      0.2904760539531708,
+                      0.19322040677070618,
+                      0.34024864435195923,
+                      0.2590281665325165,
+                      0.4204396605491638,
+                      0.27272164821624756,
+                      0.18184182047843933,
+                      0.4018012285232544,
+                      0.2784844636917114,
+                      0.17536811530590057,
+                      0.265220582485199,
+                      0.3306790292263031,
+                      0.281615674495697,
+                      0.4293278157711029,
+                      0.2506893575191498,
+                      0.17848321795463562,
+                      0.1806536614894867,
+                      0.3136754333972931,
+                      0.11037585884332657,
+                      0.3113678991794586,
+                      0.3869111239910126,
+                      0.33278241753578186,
+                      0.431765079498291,
+                      0.13555026054382324,
+                      0.31743940711021423,
+                      0.139151468873024,
+                      0.29831889271736145,
+                      0.36165446043014526,
+                      0.22261619567871094,
+                      0.2080012708902359
+                    ],
+                    "__dtype": "float32"
+                  },
+                  "scale": {
+                    "__type": "numpy.ndarray",
+                    "__contents": [
+                      0.0018952025566250086,
+                      0.003185330657288432,
+                      0.0022872129920870066,
+                      0.0015214205486699939,
+                      0.0026791230775415897,
+                      0.002039591781795025,
+                      0.003310548607259989,
+                      0.0021474144887179136,
+                      0.0014318253379315138,
+                      0.003163789166137576,
+                      0.00219279108569026,
+                      0.0013808512594550848,
+                      0.0020883509423583746,
+                      0.0026037718635052443,
+                      0.002217446221038699,
+                      0.003380534006282687,
+                      0.001973931910470128,
+                      0.0014053796185180545,
+                      0.001422469737008214,
+                      0.0024698853958398104,
+                      0.0008691012626513839,
+                      0.0024517157580703497,
+                      0.0030465442687273026,
+                      0.0026203340385109186,
+                      0.0033997250720858574,
+                      0.001067324890755117,
+                      0.0024995228741317987,
+                      0.0010956808691844344,
+                      0.002348967595025897,
+                      0.0028476729057729244,
+                      0.0017528834287077188,
+                      0.0016378052532672882
+                    ],
+                    "__dtype": "float32"
+                  },
+                  "dim": 0,
+                  "narrow_range": true,
+                  "dtype": "int8"
+                }
+              },
+              "mul_biases_q": {
+                "__type": "JsonSerializable",
+                "__module_name": "quantization.multiplicative.symmetric.mult_mulbias_qtype_new",
+                "__class_name": "MultMulBiasScaleQType",
+                "__contents": {
+                  "qnorms": {
+                    "__type": "numpy.ndarray",
+                    "__contents": [
+                      18,
+                      15,
+                      16,
+                      18,
+                      16,
+                      17,
+                      17,
+                      18,
+                      16,
+                      17,
+                      17,
+                      17,
+                      18,
+                      16,
+                      16,
+                      16,
+                      18,
+                      18,
+                      18,
+                      17,
+                      19,
+                      18,
+                      17,
+                      17,
+                      17,
+                      17,
+                      17,
+                      18,
+                      17,
+                      17,
+                      18,
+                      18
+                    ],
+                    "__dtype": "int8"
+                  },
+                  "qbiases": {
+                    "__type": "numpy.ndarray",
+                    "__contents": [
+                      195,
+                      41,
+                      59,
+                      157,
+                      69,
+                      105,
+                      171,
+                      221,
+                      37,
+                      163,
+                      113,
+                      71,
+                      215,
+                      67,
+                      57,
+                      87,
+                      203,
+                      145,
+                      147,
+                      127,
+                      179,
+                      253,
+                      157,
+                      135,
+                      175,
+                      55,
+                      129,
+                      113,
+                      121,
+                      147,
+                      181,
+                      169
+                    ],
+                    "__dtype": "uint8"
+                  },
+                  "scale": {
+                    "__type": "numpy.ndarray",
+                    "__contents": [
+                      0.0007448811369625723,
+                      0.0012519467712348673,
+                      0.0008989549998577998,
+                      0.0005979716859973401,
+                      0.0010529894216772667,
+                      0.0008016311713237108,
+                      0.0013011618214240333,
+                      0.0008440092803244338,
+                      0.0005627576228841457,
+                      0.0012434802089857674,
+                      0.0008618438759068951,
+                      0.0005427230205676744,
+                      0.0008207952331443359,
+                      0.0010233737493119573,
+                      0.00087153420963197,
+                      0.0013286685401188633,
+                      0.0007758245368643301,
+                      0.0005523635267620031,
+                      0.0005590805432873738,
+                      0.0009707516673556464,
+                      0.00034158730653689295,
+                      0.0009636103618563463,
+                      0.001197398848351921,
+                      0.0010298832655141566,
+                      0.001336211302693248,
+                      0.0004194961511396021,
+                      0.000982400236765638,
+                      0.0004306410461157518,
+                      0.0009232267267447188,
+                      0.0011192354212137927,
+                      0.0006889447234937464,
+                      0.0006437149606581071
+                    ],
+                    "__dtype": "float64"
+                  },
+                  "pre_normalization": 0,
+                  "dtype": "uint8"
+                }
+              },
+              "enable_prenorm": false
+            }
+          },
+          "NodeId_DEPTHWISE_CONV_2D_0_0_fusion###MAX_POOL_2D_0_1": {
+            "__type": "JsonSerializable",
+            "__module_name": "quantization.multiplicative.mult_quantization",
+            "__class_name": "MultQuantizationRecord",
+            "__contents": {
+              "out_qs": [
+                {
+                  "__type": "JsonSerializable",
+                  "__module_name": "quantization.multiplicative.symmetric.symmetric_mult_qtype",
+                  "__class_name": "SymmetricMultQType",
+                  "__contents": {
+                    "min_val": {
+                      "__type": "numpy.ndarray",
+                      "__contents": [
+                        -2.544301986694336
+                      ],
+                      "__dtype": "float32"
+                    },
+                    "max_val": {
+                      "__type": "numpy.ndarray",
+                      "__contents": [
+                        2.5244245529174805
+                      ],
+                      "__dtype": "float32"
+                    },
+                    "scale": {
+                      "__type": "numpy.ndarray",
+                      "__contents": [
+                        0.0198773592710495
+                      ],
+                      "__dtype": "float32"
+                    },
+                    "dim": null,
+                    "narrow_range": false,
+                    "dtype": "int8"
+                  }
+                }
+              ],
+              "in_qs": [
+                {
+                  "__type": "JsonSerializable",
+                  "__module_name": "quantization.multiplicative.symmetric.symmetric_mult_qtype",
+                  "__class_name": "SymmetricMultQType",
+                  "__contents": {
+                    "min_val": {
+                      "__type": "numpy.ndarray",
+                      "__contents": [
+                        -2.544301986694336
+                      ],
+                      "__dtype": "float32"
+                    },
+                    "max_val": {
+                      "__type": "numpy.ndarray",
+                      "__contents": [
+                        2.5244245529174805
+                      ],
+                      "__dtype": "float32"
+                    },
+                    "scale": {
+                      "__type": "numpy.ndarray",
+                      "__contents": [
+                        0.0198773592710495
+                      ],
+                      "__dtype": "float32"
+                    },
+                    "dim": null,
+                    "narrow_range": false,
+                    "dtype": "int8"
+                  }
+                }
+              ],
+              "quant_mode": "symmetric",
+              "scale_mul_biases_q": null
+            }
+          },
+          "NodeId_DEPTHWISE_CONV_2D_0_0_fusion###DEPTHWISE_CONV_2D_0_0_activation": {
+            "__type": "JsonSerializable",
+            "__module_name": "quantization.multiplicative.mult_quantization",
+            "__class_name": "MultQuantizationRecord",
+            "__contents": {
+              "out_qs": [
+                {
+                  "__type": "JsonSerializable",
+                  "__module_name": "quantization.multiplicative.symmetric.symmetric_mult_qtype",
+                  "__class_name": "SymmetricMultQType",
+                  "__contents": {
+                    "min_val": {
+                      "__type": "numpy.ndarray",
+                      "__contents": [
+                        -2.544301986694336
+                      ],
+                      "__dtype": "float32"
+                    },
+                    "max_val": {
+                      "__type": "numpy.ndarray",
+                      "__contents": [
+                        2.5244245529174805
+                      ],
+                      "__dtype": "float32"
+                    },
+                    "scale": {
+                      "__type": "numpy.ndarray",
+                      "__contents": [
+                        0.0198773592710495
+                      ],
+                      "__dtype": "float32"
+                    },
+                    "dim": null,
+                    "narrow_range": false,
+                    "dtype": "int8"
+                  }
+                }
+              ],
+              "in_qs": [
+                {
+                  "__type": "JsonSerializable",
+                  "__module_name": "quantization.multiplicative.symmetric.symmetric_mult_qtype",
+                  "__class_name": "SymmetricMultQType",
+                  "__contents": {
+                    "min_val": {
+                      "__type": "numpy.ndarray",
+                      "__contents": [
+                        -2.544301986694336
+                      ],
+                      "__dtype": "float32"
+                    },
+                    "max_val": {
+                      "__type": "numpy.ndarray",
+                      "__contents": [
+                        2.5244245529174805
+                      ],
+                      "__dtype": "float32"
+                    },
+                    "scale": {
+                      "__type": "numpy.ndarray",
+                      "__contents": [
+                        0.0198773592710495
+                      ],
+                      "__dtype": "float32"
+                    },
+                    "dim": null,
+                    "narrow_range": false,
+                    "dtype": "int8"
+                  }
+                }
+              ],
+              "quant_mode": "symmetric",
+              "scale_mul_biases_q": null
+            }
+          },
+          "NodeId_DEPTHWISE_CONV_2D_0_0_fusion###": {
+            "__type": "JsonSerializable",
+            "__module_name": "quantization.multiplicative.mult_quantization",
+            "__class_name": "MultQuantizationRecord",
+            "__contents": {
+              "out_qs": [
+                {
+                  "__type": "JsonSerializable",
+                  "__module_name": "quantization.multiplicative.symmetric.symmetric_mult_qtype",
+                  "__class_name": "SymmetricMultQType",
+                  "__contents": {
+                    "min_val": {
+                      "__type": "numpy.ndarray",
+                      "__contents": [
+                        -2.544301986694336
+                      ],
+                      "__dtype": "float32"
+                    },
+                    "max_val": {
+                      "__type": "numpy.ndarray",
+                      "__contents": [
+                        2.5244245529174805
+                      ],
+                      "__dtype": "float32"
+                    },
+                    "scale": {
+                      "__type": "numpy.ndarray",
+                      "__contents": [
+                        0.0198773592710495
+                      ],
+                      "__dtype": "float32"
+                    },
+                    "dim": null,
+                    "narrow_range": false,
+                    "dtype": "int8"
+                  }
+                }
+              ],
+              "in_qs": [
+                {
+                  "__type": "JsonSerializable",
+                  "__module_name": "quantization.multiplicative.symmetric.symmetric_mult_qtype",
+                  "__class_name": "SymmetricMultQType",
+                  "__contents": {
+                    "min_val": {
+                      "__type": "numpy.ndarray",
+                      "__contents": [
+                        -1.0
+                      ],
+                      "__dtype": "float64"
+                    },
+                    "max_val": {
+                      "__type": "numpy.ndarray",
+                      "__contents": [
+                        0.9921875
+                      ],
+                      "__dtype": "float64"
+                    },
+                    "scale": {
+                      "__type": "numpy.ndarray",
+                      "__contents": [
+                        0.0078125
+                      ],
+                      "__dtype": "float64"
+                    },
+                    "dim": null,
+                    "narrow_range": false,
+                    "dtype": "int8"
+                  }
+                }
+              ],
+              "quant_mode": "symmetric",
+              "scale_mul_biases_q": null
+            }
+          },
+          "NodeId_CONV_2D_0_2_fusion###CONV_2D_0_2": {
+            "__type": "JsonSerializable",
+            "__module_name": "quantization.multiplicative.mult_quantization",
+            "__class_name": "MultScalableFilterQuantizationRecord",
+            "__contents": {
+              "out_qs": [
+                {
+                  "__type": "JsonSerializable",
+                  "__module_name": "quantization.multiplicative.symmetric.symmetric_mult_qtype",
+                  "__class_name": "SymmetricMultQType",
+                  "__contents": {
+                    "min_val": {
+                      "__type": "numpy.ndarray",
+                      "__contents": [
+                        -7.065237522125244
+                      ],
+                      "__dtype": "float32"
+                    },
+                    "max_val": {
+                      "__type": "numpy.ndarray",
+                      "__contents": [
+                        7.010040283203125
+                      ],
+                      "__dtype": "float32"
+                    },
+                    "scale": {
+                      "__type": "numpy.ndarray",
+                      "__contents": [
+                        0.05519716441631317
+                      ],
+                      "__dtype": "float32"
+                    },
+                    "dim": null,
+                    "narrow_range": false,
+                    "dtype": "int8"
+                  }
+                }
+              ],
+              "constants_are_quantized": false,
+              "in_qs": [
+                {
+                  "__type": "JsonSerializable",
+                  "__module_name": "quantization.multiplicative.symmetric.symmetric_mult_qtype",
+                  "__class_name": "SymmetricMultQType",
+                  "__contents": {
+                    "min_val": {
+                      "__type": "numpy.ndarray",
+                      "__contents": [
+                        -2.544301986694336
+                      ],
+                      "__dtype": "float32"
+                    },
+                    "max_val": {
+                      "__type": "numpy.ndarray",
+                      "__contents": [
+                        2.5244245529174805
+                      ],
+                      "__dtype": "float32"
+                    },
+                    "scale": {
+                      "__type": "numpy.ndarray",
+                      "__contents": [
+                        0.0198773592710495
+                      ],
+                      "__dtype": "float32"
+                    },
+                    "dim": null,
+                    "narrow_range": false,
+                    "dtype": "int8"
+                  }
+                }
+              ],
+              "quant_mode": "symmetric",
+              "scale_mul_biases_q": null,
+              "calc_q": null,
+              "acc_q": null,
+              "biases_q": {
+                "__type": "JsonSerializable",
+                "__module_name": "quantization.multiplicative.symmetric.symmetric_mult_biases_qtype",
+                "__class_name": "SymmetricMultBiasesQType",
+                "__contents": {
+                  "min_val": null,
+                  "max_val": null,
+                  "scale": {
+                    "__type": "numpy.ndarray",
+                    "__contents": [
+                      2.5225113859050907e-05,
+                      3.9122180169215426e-05,
+                      4.0354741940973327e-05,
+                      2.5309684133389965e-05,
+                      2.9167462344048545e-05,
+                      5.20279209013097e-05,
+                      2.388901157246437e-05,
+                      3.389317134860903e-05,
+                      3.0318355129566044e-05,
+                      2.7358662919141352e-05,
+                      5.2550265536410734e-05,
+                      2.8353822926874273e-05,
+                      2.7993293770123273e-05,
+                      2.465259785822127e-05,
+                      2.7328111173119396e-05,
+                      3.0691320716869086e-05,
+                      3.6953006201656535e-05,
+                      3.5242661397205666e-05,
+                      2.4465316528221592e-05,
+                      3.74907031073235e-05,
+                      2.7715594114852138e-05,
+                      2.6341789634898305e-05,
+                      2.8246722649782896e-05,
+                      3.0138471629470587e-05,
+                      2.48418036790099e-05,
+                      3.151215787511319e-05,
+                      2.9633620215463452e-05,
+                      2.7894473532796837e-05,
+                      3.0153474654071033e-05,
+                      3.5307421057950705e-05,
+                      3.459281288087368e-05,
+                      2.546732321206946e-05,
+                      4.5955988753121346e-05,
+                      3.383944931556471e-05,
+                      1.4401244698092341e-05,
+                      3.762138294405304e-05,
+                      2.5896064471453428e-05,
+                      2.9362496206886135e-05,
+                      3.393436418264173e-05,
+                      1.4084898793953471e-05,
+                      2.467283593432512e-05,
+                      3.209961869288236e-05,
+                      4.0447259380016476e-05,
+                      2.5783709133975208e-05,
+                      3.232946983189322e-05,
+                      2.7536127163330093e-05,
+                      1.6817912182887085e-05,
+                      2.6015799448941834e-05,
+                      2.5260524125769734e-05,
+                      4.641591658582911e-05,
+                      2.9077602448523976e-05,
+                      3.008178282470908e-05,
+                      3.069819285883568e-05,
+                      2.5058368919417262e-05,
+                      3.113352067884989e-05,
+                      3.0271467039710842e-05,
+                      2.4660172130097635e-05,
+                      3.071517130592838e-05,
+                      1.3784846487396862e-05,
+                      2.894206772907637e-05,
+                      3.379533518454991e-05,
+                      3.312124317744747e-05,
+                      3.3354015613440424e-05,
+                      3.226026092306711e-05
+                    ],
+                    "__dtype": "float32"
+                  },
+                  "set_scale": {
+                    "__type": "numpy.ndarray",
+                    "__contents": [
+                      2.5225113859050907e-05,
+                      3.9122180169215426e-05,
+                      4.0354741940973327e-05,
+                      2.5309684133389965e-05,
+                      2.9167462344048545e-05,
+                      5.20279209013097e-05,
+                      2.388901157246437e-05,
+                      3.389317134860903e-05,
+                      3.0318355129566044e-05,
+                      2.7358662919141352e-05,
+                      5.2550265536410734e-05,
+                      2.8353822926874273e-05,
+                      2.7993293770123273e-05,
+                      2.465259785822127e-05,
+                      2.7328111173119396e-05,
+                      3.0691320716869086e-05,
+                      3.6953006201656535e-05,
+                      3.5242661397205666e-05,
+                      2.4465316528221592e-05,
+                      3.74907031073235e-05,
+                      2.7715594114852138e-05,
+                      2.6341789634898305e-05,
+                      2.8246722649782896e-05,
+                      3.0138471629470587e-05,
+                      2.48418036790099e-05,
+                      3.151215787511319e-05,
+                      2.9633620215463452e-05,
+                      2.7894473532796837e-05,
+                      3.0153474654071033e-05,
+                      3.5307421057950705e-05,
+                      3.459281288087368e-05,
+                      2.546732321206946e-05,
+                      4.5955988753121346e-05,
+                      3.383944931556471e-05,
+                      1.4401244698092341e-05,
+                      3.762138294405304e-05,
+                      2.5896064471453428e-05,
+                      2.9362496206886135e-05,
+                      3.393436418264173e-05,
+                      1.4084898793953471e-05,
+                      2.467283593432512e-05,
+                      3.209961869288236e-05,
+                      4.0447259380016476e-05,
+                      2.5783709133975208e-05,
+                      3.232946983189322e-05,
+                      2.7536127163330093e-05,
+                      1.6817912182887085e-05,
+                      2.6015799448941834e-05,
+                      2.5260524125769734e-05,
+                      4.641591658582911e-05,
+                      2.9077602448523976e-05,
+                      3.008178282470908e-05,
+                      3.069819285883568e-05,
+                      2.5058368919417262e-05,
+                      3.113352067884989e-05,
+                      3.0271467039710842e-05,
+                      2.4660172130097635e-05,
+                      3.071517130592838e-05,
+                      1.3784846487396862e-05,
+                      2.894206772907637e-05,
+                      3.379533518454991e-05,
+                      3.312124317744747e-05,
+                      3.3354015613440424e-05,
+                      3.226026092306711e-05
+                    ],
+                    "__dtype": "float32"
+                  },
+                  "dim": 0,
+                  "narrow_range": false,
+                  "dtype": "int32"
+                }
+              },
+              "weights_q": {
+                "__type": "JsonSerializable",
+                "__module_name": "quantization.multiplicative.symmetric.symmetric_mult_qtype",
+                "__class_name": "SymmetricMultQType",
+                "__contents": {
+                  "min_val": {
+                    "__type": "numpy.ndarray",
+                    "__contents": [
+                      -0.16116775572299957,
+                      -0.2499586045742035,
+                      -0.25783365964889526,
+                      -0.16170810163021088,
+                      -0.18635612726211548,
+                      -0.3324156701564789,
+                      -0.15263116359710693,
+                      -0.21654953062534332,
+                      -0.1937093883752823,
+                      -0.174799382686615,
+                      -0.33575302362442017,
+                      -0.18115763366222382,
+                      -0.17885416746139526,
+                      -0.15750984847545624,
+                      -0.17460417747497559,
+                      -0.19609233736991882,
+                      -0.23609936237335205,
+                      -0.22517167031764984,
+                      -0.15631328523159027,
+                      -0.23953481018543243,
+                      -0.17707988619804382,
+                      -0.16830240190029144,
+                      -0.18047335743904114,
+                      -0.192560076713562,
+                      -0.15871872007846832,
+                      -0.2013368010520935,
+                      -0.18933449685573578,
+                      -0.17822277545928955,
+                      -0.19265593588352203,
+                      -0.2255854308605194,
+                      -0.2210196703672409,
+                      -0.16271528601646423,
+                      -0.2936210334300995,
+                      -0.21620628237724304,
+                      -0.09201212972402573,
+                      -0.2403697371482849,
+                      -0.16545458137989044,
+                      -0.187602236866951,
+                      -0.21681272983551025,
+                      -0.08999093621969223,
+                      -0.15763916075229645,
+                      -0.2050902098417282,
+                      -0.2584247589111328,
+                      -0.16473671793937683,
+                      -0.20655876398086548,
+                      -0.17593324184417725,
+                      -0.1074526458978653,
+                      -0.1662195920944214,
+                      -0.16139400005340576,
+                      -0.296559602022171,
+                      -0.18578200042247772,
+                      -0.19219788908958435,
+                      -0.1961362212896347,
+                      -0.16010239720344543,
+                      -0.19891764223575592,
+                      -0.19340981543064117,
+                      -0.15755824744701385,
+                      -0.1962447166442871,
+                      -0.08807384967803955,
+                      -0.18491603434085846,
+                      -0.2159244269132614,
+                      -0.21161754429340363,
+                      -0.2131047546863556,
+                      -0.20611658692359924
+                    ],
+                    "__dtype": "float32"
+                  },
+                  "max_val": {
+                    "__type": "numpy.ndarray",
+                    "__contents": [
+                      0.16116775572299957,
+                      0.2499586045742035,
+                      0.25783365964889526,
+                      0.16170810163021088,
+                      0.18635612726211548,
+                      0.3324156701564789,
+                      0.15263116359710693,
+                      0.21654953062534332,
+                      0.1937093883752823,
+                      0.174799382686615,
+                      0.33575302362442017,
+                      0.18115763366222382,
+                      0.17885416746139526,
+                      0.15750984847545624,
+                      0.17460417747497559,
+                      0.19609233736991882,
+                      0.23609936237335205,
+                      0.22517167031764984,
+                      0.15631328523159027,
+                      0.23953481018543243,
+                      0.17707988619804382,
+                      0.16830240190029144,
+                      0.18047335743904114,
+                      0.192560076713562,
+                      0.15871872007846832,
+                      0.2013368010520935,
+                      0.18933449685573578,
+                      0.17822277545928955,
+                      0.19265593588352203,
+                      0.2255854308605194,
+                      0.2210196703672409,
+                      0.16271528601646423,
+                      0.2936210334300995,
+                      0.21620628237724304,
+                      0.09201212972402573,
+                      0.2403697371482849,
+                      0.16545458137989044,
+                      0.187602236866951,
+                      0.21681272983551025,
+                      0.08999093621969223,
+                      0.15763916075229645,
+                      0.2050902098417282,
+                      0.2584247589111328,
+                      0.16473671793937683,
+                      0.20655876398086548,
+                      0.17593324184417725,
+                      0.1074526458978653,
+                      0.1662195920944214,
+                      0.16139400005340576,
+                      0.296559602022171,
+                      0.18578200042247772,
+                      0.19219788908958435,
+                      0.1961362212896347,
+                      0.16010239720344543,
+                      0.19891764223575592,
+                      0.19340981543064117,
+                      0.15755824744701385,
+                      0.1962447166442871,
+                      0.08807384967803955,
+                      0.18491603434085846,
+                      0.2159244269132614,
+                      0.21161754429340363,
+                      0.2131047546863556,
+                      0.20611658692359924
+                    ],
+                    "__dtype": "float32"
+                  },
+                  "scale": {
+                    "__type": "numpy.ndarray",
+                    "__contents": [
+                      0.0012690374860540032,
+                      0.00196817796677351,
+                      0.002030186355113983,
+                      0.0012732921168208122,
+                      0.0014673711266368628,
+                      0.0026174462400376797,
+                      0.0012018202105537057,
+                      0.0017051143804565072,
+                      0.001525270752608776,
+                      0.001376373111270368,
+                      0.0026437246706336737,
+                      0.0014264381024986506,
+                      0.0014083004789426923,
+                      0.0012402350548654795,
+                      0.001374836079776287,
+                      0.0015440341085195541,
+                      0.0018590501276776195,
+                      0.0017730052350088954,
+                      0.0012308132136240602,
+                      0.0018861008575186133,
+                      0.0013943298254162073,
+                      0.0013252157950773835,
+                      0.0014210500521585345,
+                      0.0015162210911512375,
+                      0.0012497537536546588,
+                      0.0015853291843086481,
+                      0.0014908227603882551,
+                      0.001403328962624073,
+                      0.0015169759280979633,
+                      0.001776263234205544,
+                      0.0017403123201802373,
+                      0.0012812226777896285,
+                      0.0023119766265153885,
+                      0.001702411682344973,
+                      0.0007245049346238375,
+                      0.001892675063572824,
+                      0.0013027919922024012,
+                      0.0014771829592064023,
+                      0.0017071868060156703,
+                      0.0007085900288075209,
+                      0.0012412532232701778,
+                      0.001614883542060852,
+                      0.002034840639680624,
+                      0.0012971395626664162,
+                      0.0016264469595625997,
+                      0.0013853011187165976,
+                      0.0008460837998427451,
+                      0.0013088156701996922,
+                      0.001270818873308599,
+                      0.0023351148702204227,
+                      0.0014628503704443574,
+                      0.0015133691485971212,
+                      0.0015443797456100583,
+                      0.001260648830793798,
+                      0.001566280610859394,
+                      0.0015229119453579187,
+                      0.001240616082213819,
+                      0.0015452340012416244,
+                      0.0006934948614798486,
+                      0.001456031808629632,
+                      0.0017001923406496644,
+                      0.0016662798589095473,
+                      0.0016779901925474405,
+                      0.0016229652101173997
+                    ],
+                    "__dtype": "float32"
+                  },
+                  "dim": 0,
+                  "narrow_range": true,
+                  "dtype": "int8"
+                }
+              },
+              "mul_biases_q": {
+                "__type": "JsonSerializable",
+                "__module_name": "quantization.multiplicative.symmetric.mult_mulbias_qtype_new",
+                "__class_name": "MultMulBiasScaleQType",
+                "__contents": {
+                  "qnorms": {
+                    "__type": "numpy.ndarray",
+                    "__contents": [
+                      15,
+                      17,
+                      12,
+                      15,
+                      18,
+                      18,
+                      19,
+                      18,
+                      14,
+                      17,
+                      17,
+                      18,
+                      18,
+                      18,
+                      17,
+                      17,
+                      18,
+                      18,
+                      16,
+                      17,
+                      16,
+                      18,
+                      17,
+                      18,
+                      17,
+                      17,
+                      18,
+                      16,
+                      18,
+                      15,
+                      16,
+                      18,
+                      17,
+                      18,
+                      19,
+                      18,
+                      18,
+                      18,
+                      18,
+                      18,
+                      18,
+                      15,
+                      12,
+                      19,
+                      17,
+                      18,
+                      14,
+                      19,
+                      15,
+                      16,
+                      17,
+                      18,
+                      17,
+                      18,
+                      16,
+                      14,
+                      18,
+                      17,
+                      19,
+                      18,
+                      18,
+                      18,
+                      17,
+                      18
+                    ],
+                    "__dtype": "int8"
+                  },
+                  "qbiases": {
+                    "__type": "numpy.ndarray",
+                    "__contents": [
+                      15,
+                      93,
+                      3,
+                      15,
+                      139,
+                      247,
+                      227,
+                      161,
+                      9,
+                      65,
+                      125,
+                      135,
+                      133,
+                      117,
+                      65,
+                      73,
+                      175,
+                      167,
+                      29,
+                      89,
+                      33,
+                      125,
+                      67,
+                      143,
+                      59,
+                      75,
+                      141,
+                      33,
+                      143,
+                      21,
+                      41,
+                      121,
+                      109,
+                      161,
+                      137,
+                      179,
+                      123,
+                      139,
+                      161,
+                      67,
+                      117,
+                      19,
+                      3,
+                      245,
+                      77,
+                      131,
+                      5,
+                      247,
+                      15,
+                      55,
+                      69,
+                      143,
+                      73,
+                      119,
+                      37,
+                      9,
+                      117,
+                      73,
+                      131,
+                      137,
+                      161,
+                      157,
+                      79,
+                      153
+                    ],
+                    "__dtype": "uint8"
+                  },
+                  "scale": {
+                    "__type": "numpy.ndarray",
+                    "__contents": [
+                      0.00045700016198679805,
+                      0.00070877157850191,
+                      0.0007311017252504826,
+                      0.0004585323331411928,
+                      0.0005284231738187373,
+                      0.0009425831958651543,
+                      0.0004327941860537976,
+                      0.0006140382611192763,
+                      0.0005492737982422113,
+                      0.0004956534248776734,
+                      0.000952046480961144,
+                      0.0005136826075613499,
+                      0.000507150951307267,
+                      0.00044662796426564455,
+                      0.0004950999282300472,
+                      0.0005560307763516903,
+                      0.0006694729090668261,
+                      0.0006384868174791336,
+                      0.0004432350106071681,
+                      0.0006792143103666604,
+                      0.0005021198885515332,
+                      0.00047723084571771324,
+                      0.0005117422551847994,
+                      0.0005460148677229881,
+                      0.0004500557843130082,
+                      0.0005709017277695239,
+                      0.0005368685233406723,
+                      0.0005053606000728905,
+                      0.0005462866392917931,
+                      0.0006396600510925055,
+                      0.000626713561359793,
+                      0.0004613882629200816,
+                      0.0008325788076035678,
+                      0.0006130649708211422,
+                      0.0002609055081848055,
+                      0.0006815817905589938,
+                      0.0004691556969191879,
+                      0.0005319566116668284,
+                      0.0006147845415398479,
+                      0.0002551743236836046,
+                      0.0004469946143217385,
+                      0.0005815447075292468,
+                      0.0007327778730541468,
+                      0.00046712017501704395,
+                      0.0005857088835909963,
+                      0.0004988685250282288,
+                      0.0003046879719477147,
+                      0.0004713249218184501,
+                      0.00045764169772155583,
+                      0.0008409112342633307,
+                      0.0005267952219583094,
+                      0.0005449878517538309,
+                      0.0005561552243307233,
+                      0.00045397927169688046,
+                      0.0005640420131385326,
+                      0.0005484243156388402,
+                      0.00044676518882624805,
+                      0.000556462851818651,
+                      0.0002497383102308959,
+                      0.0005243397317826748,
+                      0.0006122657796368003,
+                      0.0006000533467158675,
+                      0.0006042704335413873,
+                      0.0005844550323672593
+                    ],
+                    "__dtype": "float32"
+                  },
+                  "pre_normalization": 0,
+                  "dtype": "uint8"
+                }
+              },
+              "enable_prenorm": false
+            }
+          },
+          "NodeId_CONV_2D_0_2_fusion###MAX_POOL_2D_0_3": {
+            "__type": "JsonSerializable",
+            "__module_name": "quantization.multiplicative.mult_quantization",
+            "__class_name": "MultQuantizationRecord",
+            "__contents": {
+              "out_qs": [
+                {
+                  "__type": "JsonSerializable",
+                  "__module_name": "quantization.multiplicative.symmetric.symmetric_mult_qtype",
+                  "__class_name": "SymmetricMultQType",
+                  "__contents": {
+                    "min_val": {
+                      "__type": "numpy.ndarray",
+                      "__contents": [
+                        -7.065237522125244
+                      ],
+                      "__dtype": "float32"
+                    },
+                    "max_val": {
+                      "__type": "numpy.ndarray",
+                      "__contents": [
+                        7.010040283203125
+                      ],
+                      "__dtype": "float32"
+                    },
+                    "scale": {
+                      "__type": "numpy.ndarray",
+                      "__contents": [
+                        0.05519716441631317
+                      ],
+                      "__dtype": "float32"
+                    },
+                    "dim": null,
+                    "narrow_range": false,
+                    "dtype": "int8"
+                  }
+                }
+              ],
+              "in_qs": [
+                {
+                  "__type": "JsonSerializable",
+                  "__module_name": "quantization.multiplicative.symmetric.symmetric_mult_qtype",
+                  "__class_name": "SymmetricMultQType",
+                  "__contents": {
+                    "min_val": {
+                      "__type": "numpy.ndarray",
+                      "__contents": [
+                        -7.065237522125244
+                      ],
+                      "__dtype": "float32"
+                    },
+                    "max_val": {
+                      "__type": "numpy.ndarray",
+                      "__contents": [
+                        7.010040283203125
+                      ],
+                      "__dtype": "float32"
+                    },
+                    "scale": {
+                      "__type": "numpy.ndarray",
+                      "__contents": [
+                        0.05519716441631317
+                      ],
+                      "__dtype": "float32"
+                    },
+                    "dim": null,
+                    "narrow_range": false,
+                    "dtype": "int8"
+                  }
+                }
+              ],
+              "quant_mode": "symmetric",
+              "scale_mul_biases_q": null
+            }
+          },
+          "NodeId_CONV_2D_0_2_fusion###CONV_2D_0_2_activation": {
+            "__type": "JsonSerializable",
+            "__module_name": "quantization.multiplicative.mult_quantization",
+            "__class_name": "MultQuantizationRecord",
+            "__contents": {
+              "out_qs": [
+                {
+                  "__type": "JsonSerializable",
+                  "__module_name": "quantization.multiplicative.symmetric.symmetric_mult_qtype",
+                  "__class_name": "SymmetricMultQType",
+                  "__contents": {
+                    "min_val": {
+                      "__type": "numpy.ndarray",
+                      "__contents": [
+                        -7.065237522125244
+                      ],
+                      "__dtype": "float32"
+                    },
+                    "max_val": {
+                      "__type": "numpy.ndarray",
+                      "__contents": [
+                        7.010040283203125
+                      ],
+                      "__dtype": "float32"
+                    },
+                    "scale": {
+                      "__type": "numpy.ndarray",
+                      "__contents": [
+                        0.05519716441631317
+                      ],
+                      "__dtype": "float32"
+                    },
+                    "dim": null,
+                    "narrow_range": false,
+                    "dtype": "int8"
+                  }
+                }
+              ],
+              "in_qs": [
+                {
+                  "__type": "JsonSerializable",
+                  "__module_name": "quantization.multiplicative.symmetric.symmetric_mult_qtype",
+                  "__class_name": "SymmetricMultQType",
+                  "__contents": {
+                    "min_val": {
+                      "__type": "numpy.ndarray",
+                      "__contents": [
+                        -7.065237522125244
+                      ],
+                      "__dtype": "float32"
+                    },
+                    "max_val": {
+                      "__type": "numpy.ndarray",
+                      "__contents": [
+                        7.010040283203125
+                      ],
+                      "__dtype": "float32"
+                    },
+                    "scale": {
+                      "__type": "numpy.ndarray",
+                      "__contents": [
+                        0.05519716441631317
+                      ],
+                      "__dtype": "float32"
+                    },
+                    "dim": null,
+                    "narrow_range": false,
+                    "dtype": "int8"
+                  }
+                }
+              ],
+              "quant_mode": "symmetric",
+              "scale_mul_biases_q": null
+            }
+          },
+          "NodeId_CONV_2D_0_2_fusion###": {
+            "__type": "JsonSerializable",
+            "__module_name": "quantization.multiplicative.mult_quantization",
+            "__class_name": "MultQuantizationRecord",
+            "__contents": {
+              "out_qs": [
+                {
+                  "__type": "JsonSerializable",
+                  "__module_name": "quantization.multiplicative.symmetric.symmetric_mult_qtype",
+                  "__class_name": "SymmetricMultQType",
+                  "__contents": {
+                    "min_val": {
+                      "__type": "numpy.ndarray",
+                      "__contents": [
+                        -7.065237522125244
+                      ],
+                      "__dtype": "float32"
+                    },
+                    "max_val": {
+                      "__type": "numpy.ndarray",
+                      "__contents": [
+                        7.010040283203125
+                      ],
+                      "__dtype": "float32"
+                    },
+                    "scale": {
+                      "__type": "numpy.ndarray",
+                      "__contents": [
+                        0.05519716441631317
+                      ],
+                      "__dtype": "float32"
+                    },
+                    "dim": null,
+                    "narrow_range": false,
+                    "dtype": "int8"
+                  }
+                }
+              ],
+              "in_qs": [
+                {
+                  "__type": "JsonSerializable",
+                  "__module_name": "quantization.multiplicative.symmetric.symmetric_mult_qtype",
+                  "__class_name": "SymmetricMultQType",
+                  "__contents": {
+                    "min_val": {
+                      "__type": "numpy.ndarray",
+                      "__contents": [
+                        -2.544301986694336
+                      ],
+                      "__dtype": "float32"
+                    },
+                    "max_val": {
+                      "__type": "numpy.ndarray",
+                      "__contents": [
+                        2.5244245529174805
+                      ],
+                      "__dtype": "float32"
+                    },
+                    "scale": {
+                      "__type": "numpy.ndarray",
+                      "__contents": [
+                        0.0198773592710495
+                      ],
+                      "__dtype": "float32"
+                    },
+                    "dim": null,
+                    "narrow_range": false,
+                    "dtype": "int8"
+                  }
+                }
+              ],
+              "quant_mode": "symmetric",
+              "scale_mul_biases_q": null
+            }
+          },
+          "NodeId_FULLY_CONNECTED_0_4###": {
+            "__type": "JsonSerializable",
+            "__module_name": "quantization.multiplicative.mult_quantization",
+            "__class_name": "MultScalableFilterQuantizationRecord",
+            "__contents": {
+              "out_qs": [
+                {
+                  "__type": "JsonSerializable",
+                  "__module_name": "quantization.multiplicative.symmetric.symmetric_mult_qtype",
+                  "__class_name": "SymmetricMultQType",
+                  "__contents": {
+                    "min_val": {
+                      "__type": "numpy.ndarray",
+                      "__contents": [
+                        -14.621070861816406
+                      ],
+                      "__dtype": "float32"
+                    },
+                    "max_val": {
+                      "__type": "numpy.ndarray",
+                      "__contents": [
+                        14.506843566894531
+                      ],
+                      "__dtype": "float32"
+                    },
+                    "scale": {
+                      "__type": "numpy.ndarray",
+                      "__contents": [
+                        0.125
+                      ],
+                      "__dtype": "float32"
+                    },
+                    "dim": null,
+                    "narrow_range": false,
+                    "dtype": "int8"
+                  }
+                }
+              ],
+              "constants_are_quantized": false,
+              "in_qs": [
+                {
+                  "__type": "JsonSerializable",
+                  "__module_name": "quantization.multiplicative.symmetric.symmetric_mult_qtype",
+                  "__class_name": "SymmetricMultQType",
+                  "__contents": {
+                    "min_val": {
+                      "__type": "numpy.ndarray",
+                      "__contents": [
+                        -7.065237522125244
+                      ],
+                      "__dtype": "float32"
+                    },
+                    "max_val": {
+                      "__type": "numpy.ndarray",
+                      "__contents": [
+                        7.010040283203125
+                      ],
+                      "__dtype": "float32"
+                    },
+                    "scale": {
+                      "__type": "numpy.ndarray",
+                      "__contents": [
+                        0.05519716441631317
+                      ],
+                      "__dtype": "float32"
+                    },
+                    "dim": null,
+                    "narrow_range": false,
+                    "dtype": "int8"
+                  }
+                }
+              ],
+              "quant_mode": "symmetric",
+              "scale_mul_biases_q": null,
+              "calc_q": null,
+              "acc_q": null,
+              "biases_q": {
+                "__type": "JsonSerializable",
+                "__module_name": "quantization.multiplicative.symmetric.symmetric_mult_biases_qtype",
+                "__class_name": "SymmetricMultBiasesQType",
+                "__contents": {
+                  "min_val": null,
+                  "max_val": null,
+                  "scale": {
+                    "__type": "numpy.ndarray",
+                    "__contents": [
+                      0.00011985640594502911,
+                      0.0001194169235532172,
+                      0.0001420391199644655,
+                      0.00012668278941418976,
+                      0.00013681581185664982,
+                      0.00016694092482794076,
+                      0.00013671845954377204,
+                      0.0001352814433630556,
+                      0.0001392516278428957,
+                      0.0001575885253259912
+                    ],
+                    "__dtype": "float32"
+                  },
+                  "set_scale": {
+                    "__type": "numpy.ndarray",
+                    "__contents": [
+                      0.00011985640594502911,
+                      0.0001194169235532172,
+                      0.0001420391199644655,
+                      0.00012668278941418976,
+                      0.00013681581185664982,
+                      0.00016694092482794076,
+                      0.00013671845954377204,
+                      0.0001352814433630556,
+                      0.0001392516278428957,
+                      0.0001575885253259912
+                    ],
+                    "__dtype": "float32"
+                  },
+                  "dim": 0,
+                  "narrow_range": false,
+                  "dtype": "int32"
+                }
+              },
+              "weights_q": {
+                "__type": "JsonSerializable",
+                "__module_name": "quantization.multiplicative.symmetric.symmetric_mult_qtype",
+                "__class_name": "SymmetricMultQType",
+                "__contents": {
+                  "min_val": {
+                    "__type": "numpy.ndarray",
+                    "__contents": [
+                      -0.27577075362205505,
+                      -0.27475956082344055,
+                      -0.32680967450141907,
+                      -0.29147717356681824,
+                      -0.3147916793823242,
+                      -0.38410481810569763,
+                      -0.3145676851272583,
+                      -0.3112613260746002,
+                      -0.3203961253166199,
+                      -0.36258643865585327
+                    ],
+                    "__dtype": "float32"
+                  },
+                  "max_val": {
+                    "__type": "numpy.ndarray",
+                    "__contents": [
+                      0.27577075362205505,
+                      0.27475956082344055,
+                      0.32680967450141907,
+                      0.29147717356681824,
+                      0.3147916793823242,
+                      0.38410481810569763,
+                      0.3145676851272583,
+                      0.3112613260746002,
+                      0.3203961253166199,
+                      0.36258643865585327
+                    ],
+                    "__dtype": "float32"
+                  },
+                  "scale": {
+                    "__type": "numpy.ndarray",
+                    "__contents": [
+                      0.0021714232861995697,
+                      0.0021634611766785383,
+                      0.0025733045767992735,
+                      0.0022950959391891956,
+                      0.002478674752637744,
+                      0.003024447476491332,
+                      0.0024769108276814222,
+                      0.002450876636430621,
+                      0.0025228040758520365,
+                      0.002855011261999607
+                    ],
+                    "__dtype": "float32"
+                  },
+                  "dim": 0,
+                  "narrow_range": true,
+                  "dtype": "int8"
+                }
+              },
+              "mul_biases_q": {
+                "__type": "JsonSerializable",
+                "__module_name": "quantization.multiplicative.symmetric.mult_mulbias_qtype_new",
+                "__class_name": "MultMulBiasScaleQType",
+                "__contents": {
+                  "qnorms": {
+                    "__type": "numpy.ndarray",
+                    "__contents": [
+                      18,
+                      17,
+                      17,
+                      17,
+                      17,
+                      17,
+                      17,
+                      16,
+                      16,
+                      17
+                    ],
+                    "__dtype": "int8"
+                  },
+                  "qbiases": {
+                    "__type": "numpy.ndarray",
+                    "__contents": [
+                      251,
+                      125,
+                      149,
+                      133,
+                      143,
+                      175,
+                      143,
+                      71,
+                      73,
+                      165
+                    ],
+                    "__dtype": "uint8"
+                  },
+                  "scale": {
+                    "__type": "numpy.ndarray",
+                    "__contents": [
+                      0.0009588512475602329,
+                      0.0009553353884257376,
+                      0.001136312959715724,
+                      0.001013462315313518,
+                      0.0010945264948531985,
+                      0.001335527398623526,
+                      0.0010937476763501763,
+                      0.0010822515469044447,
+                      0.0011140130227431655,
+                      0.0012607082026079297
+                    ],
+                    "__dtype": "float32"
+                  },
+                  "pre_normalization": 0,
+                  "dtype": "uint8"
+                }
+              },
+              "enable_prenorm": false
+            }
+          },
+          "NodeId_SOFTMAX_0_5###": {
+            "__type": "JsonSerializable",
+            "__module_name": "quantization.multiplicative.mult_quantization",
+            "__class_name": "MultQuantizationRecord",
+            "__contents": {
+              "out_qs": [
+                {
+                  "__type": "JsonSerializable",
+                  "__module_name": "quantization.multiplicative.symmetric.symmetric_mult_qtype",
+                  "__class_name": "SymmetricMultQType",
+                  "__contents": {
+                    "min_val": {
+                      "__type": "numpy.ndarray",
+                      "__contents": [
+                        -1.0
+                      ],
+                      "__dtype": "float64"
+                    },
+                    "max_val": {
+                      "__type": "numpy.ndarray",
+                      "__contents": [
+                        0.999969482421875
+                      ],
+                      "__dtype": "float64"
+                    },
+                    "scale": {
+                      "__type": "numpy.ndarray",
+                      "__contents": [
+                        3.0517578125e-05
+                      ],
+                      "__dtype": "float64"
+                    },
+                    "dim": 0,
+                    "narrow_range": false,
+                    "dtype": "int16"
+                  }
+                }
+              ],
+              "in_qs": [
+                {
+                  "__type": "JsonSerializable",
+                  "__module_name": "quantization.multiplicative.symmetric.symmetric_mult_qtype",
+                  "__class_name": "SymmetricMultQType",
+                  "__contents": {
+                    "min_val": {
+                      "__type": "numpy.ndarray",
+                      "__contents": [
+                        -14.621070861816406
+                      ],
+                      "__dtype": "float32"
+                    },
+                    "max_val": {
+                      "__type": "numpy.ndarray",
+                      "__contents": [
+                        14.506843566894531
+                      ],
+                      "__dtype": "float32"
+                    },
+                    "scale": {
+                      "__type": "numpy.ndarray",
+                      "__contents": [
+                        0.125
+                      ],
+                      "__dtype": "float32"
+                    },
+                    "dim": null,
+                    "narrow_range": false,
+                    "dtype": "int8"
+                  }
+                }
+              ],
+              "quant_mode": "symmetric",
+              "scale_mul_biases_q": null
+            }
+          },
+          "NodeId_output_1###": {
+            "__type": "JsonSerializable",
+            "__module_name": "quantization.multiplicative.mult_quantization",
+            "__class_name": "MultQuantizationRecord",
+            "__contents": {
+              "out_qs": [
+                {
+                  "__type": "JsonSerializable",
+                  "__module_name": "quantization.multiplicative.symmetric.symmetric_mult_qtype",
+                  "__class_name": "SymmetricMultQType",
+                  "__contents": {
+                    "min_val": {
+                      "__type": "numpy.ndarray",
+                      "__contents": [
+                        -1.0
+                      ],
+                      "__dtype": "float64"
+                    },
+                    "max_val": {
+                      "__type": "numpy.ndarray",
+                      "__contents": [
+                        0.999969482421875
+                      ],
+                      "__dtype": "float64"
+                    },
+                    "scale": {
+                      "__type": "numpy.ndarray",
+                      "__contents": [
+                        3.0517578125e-05
+                      ],
+                      "__dtype": "float64"
+                    },
+                    "dim": 0,
+                    "narrow_range": false,
+                    "dtype": "int16"
+                  }
+                }
+              ],
+              "in_qs": [
+                {
+                  "__type": "JsonSerializable",
+                  "__module_name": "quantization.multiplicative.symmetric.symmetric_mult_qtype",
+                  "__class_name": "SymmetricMultQType",
+                  "__contents": {
+                    "min_val": {
+                      "__type": "numpy.ndarray",
+                      "__contents": [
+                        -1.0
+                      ],
+                      "__dtype": "float64"
+                    },
+                    "max_val": {
+                      "__type": "numpy.ndarray",
+                      "__contents": [
+                        0.999969482421875
+                      ],
+                      "__dtype": "float64"
+                    },
+                    "scale": {
+                      "__type": "numpy.ndarray",
+                      "__contents": [
+                        3.0517578125e-05
+                      ],
+                      "__dtype": "float64"
+                    },
+                    "dim": 0,
+                    "narrow_range": false,
+                    "dtype": "int16"
+                  }
+                }
+              ],
+              "quant_mode": "symmetric",
+              "scale_mul_biases_q": null
+            }
+          },
+          "__quantizer": {
+            "__type": "JsonSerializable",
+            "__module_name": "quantization.multiplicative.mult_quantizer",
+            "__class_name": "MultQuantizer",
+            "__contents": {
+              "activation_stats": {
+                "NodeId_input_1###": {
+                  "range_in": [],
+                  "range_out": [
+                    {
+                      "min": -1.0,
+                      "max": 0.9921875,
+                      "per_axis": [
+                        {
+                          "min": {
+                            "__type": "numpy.ndarray",
+                            "__contents": [
+                              -1.0
+                            ],
+                            "__dtype": "float64"
+                          },
+                          "max": {
+                            "__type": "numpy.ndarray",
+                            "__contents": [
+                              0.9921875
+                            ],
+                            "__dtype": "float64"
+                          }
+                        },
+                        {
+                          "min": {
+                            "__type": "numpy.ndarray",
+                            "__contents": [
+                              -1.0,
+                              -1.0,
+                              -1.0,
+                              -1.0,
+                              -1.0,
+                              -1.0,
+                              -1.0,
+                              -1.0,
+                              -1.0,
+                              -1.0,
+                              -1.0,
+                              -1.0,
+                              -1.0,
+                              -1.0,
+                              -1.0,
+                              -1.0,
+                              -1.0,
+                              -1.0,
+                              -1.0,
+                              -1.0,
+                              -1.0,
+                              -1.0,
+                              -1.0,
+                              -1.0,
+                              -1.0,
+                              -1.0,
+                              -1.0,
+                              -1.0
+                            ],
+                            "__dtype": "float64"
+                          },
+                          "max": {
+                            "__type": "numpy.ndarray",
+                            "__contents": [
+                              -1.0,
+                              -1.0,
+                              0.9921875,
+                              0.9765625,
+                              0.9921875,
+                              0.9921875,
+                              0.9921875,
+                              0.9921875,
+                              0.9921875,
+                              0.9921875,
+                              0.9921875,
+                              0.9921875,
+                              0.9921875,
+                              0.9921875,
+                              0.9921875,
+                              0.9921875,
+                              0.9921875,
+                              0.9921875,
+                              0.9921875,
+                              0.9921875,
+                              0.9921875,
+                              0.9921875,
+                              0.9921875,
+                              0.9921875,
+                              0.9921875,
+                              0.9921875,
+                              0.984375,
+                              -1.0
+                            ],
+                            "__dtype": "float64"
+                          }
+                        },
+                        {
+                          "min": {
+                            "__type": "numpy.ndarray",
+                            "__contents": [
+                              -1.0,
+                              -1.0,
+                              -1.0,
+                              -1.0,
+                              -1.0,
+                              -1.0,
+                              -1.0,
+                              -1.0,
+                              -1.0,
+                              -1.0,
+                              -1.0,
+                              -1.0,
+                              -1.0,
+                              -1.0,
+                              -1.0,
+                              -1.0,
+                              -1.0,
+                              -1.0,
+                              -1.0,
+                              -1.0,
+                              -1.0,
+                              -1.0,
+                              -1.0,
+                              -1.0,
+                              -1.0,
+                              -1.0,
+                              -1.0,
+                              -1.0
+                            ],
+                            "__dtype": "float64"
+                          },
+                          "max": {
+                            "__type": "numpy.ndarray",
+                            "__contents": [
+                              -1.0,
+                              -1.0,
+                              -1.0,
+                              0.640625,
+                              0.9921875,
+                              0.9921875,
+                              0.984375,
+                              0.9921875,
+                              0.9921875,
+                              0.9921875,
+                              0.9921875,
+                              0.9921875,
+                              0.9921875,
+                              0.9921875,
+                              0.9921875,
+                              0.9921875,
+                              0.9921875,
+                              0.9921875,
+                              0.9921875,
+                              0.9921875,
+                              0.9921875,
+                              0.9921875,
+                              0.9921875,
+                              0.9921875,
+                              0.7265625,
+                              0.7734375,
+                              -0.359375,
+                              -1.0
+                            ],
+                            "__dtype": "float64"
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                },
+                "NodeId_DEPTHWISE_CONV_2D_0_0_fusion###DEPTHWISE_CONV_2D_0_0": {
+                  "range_in": [],
+                  "range_out": [
+                    {
+                      "min": -2.2461698055267334,
+                      "max": 2.5244245529174805,
+                      "per_axis": [
+                        {
+                          "min": {
+                            "__type": "numpy.ndarray",
+                            "__contents": [
+                              -1.1383827924728394,
+                              -1.771630048751831,
+                              -0.9249628186225891,
+                              -0.8114254474639893,
+                              -1.5041899681091309,
+                              -1.0365636348724365,
+                              -2.0841684341430664,
+                              -1.343354344367981,
+                              -1.0667489767074585,
+                              -1.6510136127471924,
+                              -1.3770904541015625,
+                              -0.567294180393219,
+                              -1.2112352848052979,
+                              -1.7277061939239502,
+                              -1.1372697353363037,
+                              -2.1232590675354004,
+                              -0.8528990745544434,
+                              -0.6766122579574585,
+                              -0.6197776198387146,
+                              -1.2818400859832764,
+                              -0.541750967502594,
+                              -1.3154877424240112,
+                              -2.2461698055267334,
+                              -1.8191109895706177,
+                              -2.0969135761260986,
+                              -0.4907132089138031,
+                              -1.3407937288284302,
+                              -0.43025127053260803,
+                              -1.3436931371688843,
+                              -1.5569126605987549,
+                              -0.8966367244720459,
+                              -0.6177886128425598
+                            ],
+                            "__dtype": "float64"
+                          },
+                          "max": {
+                            "__type": "numpy.ndarray",
+                            "__contents": [
+                              1.3716800212860107,
+                              1.9455336332321167,
+                              1.0519897937774658,
+                              0.7591208219528198,
+                              1.8330590724945068,
+                              1.1632189750671387,
+                              2.2379047870635986,
+                              1.4165658950805664,
+                              1.08860445022583,
+                              1.8303911685943604,
+                              1.4483258724212646,
+                              0.5231671929359436,
+                              1.310941457748413,
+                              1.9063489437103271,
+                              1.3541897535324097,
+                              2.400371551513672,
+                              0.924262285232544,
+                              0.6863187551498413,
+                              0.6007704734802246,
+                              1.4520952701568604,
+                              0.5291010141372681,
+                              1.543238639831543,
+                              2.3424129486083984,
+                              2.252406597137451,
+                              2.5244245529174805,
+                              0.45631974935531616,
+                              1.708998680114746,
+                              0.3844859004020691,
+                              1.293491244316101,
+                              1.6475789546966553,
+                              0.8926080465316772,
+                              0.9150876998901367
+                            ],
+                            "__dtype": "float32"
+                          }
+                        },
+                        {
+                          "min": {
+                            "__type": "numpy.ndarray",
+                            "__contents": [
+                              -1.8191109895706177,
+                              -2.1237545013427734,
+                              -2.114912509918213,
+                              -2.0557429790496826,
+                              -2.049813747406006,
+                              -2.062692165374756,
+                              -2.1700851917266846,
+                              -2.2461698055267334,
+                              -2.050492763519287,
+                              -2.0841684341430664,
+                              -2.042444944381714,
+                              -2.0791234970092773,
+                              -2.0969135761260986
+                            ],
+                            "__dtype": "float64"
+                          },
+                          "max": {
+                            "__type": "numpy.ndarray",
+                            "__contents": [
+                              1.6615321636199951,
+                              2.2634429931640625,
+                              2.5244245529174805,
+                              2.5190789699554443,
+                              2.4362034797668457,
+                              2.4155023097991943,
+                              2.4709465503692627,
+                              2.37203049659729,
+                              2.2889487743377686,
+                              2.403010845184326,
+                              2.5038681030273438,
+                              2.3942477703094482,
+                              2.009725570678711
+                            ],
+                            "__dtype": "float32"
+                          }
+                        },
+                        {
+                          "min": {
+                            "__type": "numpy.ndarray",
+                            "__contents": [
+                              -1.8191109895706177,
+                              -1.8191109895706177,
+                              -2.0267512798309326,
+                              -2.0382606983184814,
+                              -2.0841684341430664,
+                              -2.1700851917266846,
+                              -2.1174917221069336,
+                              -2.1232590675354004,
+                              -2.2461698055267334,
+                              -2.0458271503448486,
+                              -2.0402698516845703,
+                              -1.8191109895706177,
+                              -1.8191109895706177
+                            ],
+                            "__dtype": "float64"
+                          },
+                          "max": {
+                            "__type": "numpy.ndarray",
+                            "__contents": [
+                              1.08860445022583,
+                              1.454895257949829,
+                              1.9649074077606201,
+                              2.4209916591644287,
+                              2.4859728813171387,
+                              2.4670937061309814,
+                              2.5038681030273438,
+                              2.5190789699554443,
+                              2.5244245529174805,
+                              2.473057270050049,
+                              2.500492811203003,
+                              2.0194413661956787,
+                              1.08860445022583
+                            ],
+                            "__dtype": "float32"
+                          }
+                        }
+                      ]
+                    }
+                  ],
+                  "range_acc": {
+                    "min": -2.2461698055267334,
+                    "max": 2.5244245529174805
+                  }
+                },
+                "NodeId_DEPTHWISE_CONV_2D_0_0_fusion###MAX_POOL_2D_0_1": {
+                  "range_in": [],
+                  "range_out": [
+                    {
+                      "min": -1.8191109895706177,
+                      "max": 2.5244245529174805,
+                      "per_axis": [
+                        {
+                          "min": {
+                            "__type": "numpy.ndarray",
+                            "__contents": [
+                              -0.263785719871521,
+                              -0.481507807970047,
+                              -0.2954132556915283,
+                              -0.3280268609523773,
+                              -0.2797185778617859,
+                              -0.2373352348804474,
+                              -1.0297622680664062,
+                              -0.26974257826805115,
+                              -0.9065783619880676,
+                              -0.48458945751190186,
+                              -0.28916478157043457,
+                              -0.21873752772808075,
+                              -0.2810707986354828,
+                              -0.9533973932266235,
+                              -0.6706464886665344,
+                              -0.38417840003967285,
+                              -0.18252234160900116,
+                              -0.632611870765686,
+                              -0.5751391053199768,
+                              -0.4021748900413513,
+                              -0.5015073418617249,
+                              -0.6369179487228394,
+                              -0.48850318789482117,
+                              -1.8191109895706177,
+                              -0.4873734712600708,
+                              -0.20756623148918152,
+                              -1.2377240657806396,
+                              -0.17661213874816895,
+                              -0.2524285316467285,
+                              -0.6419141292572021,
+                              -0.34882837533950806,
+                              -0.11108346283435822
+                            ],
+                            "__dtype": "float64"
+                          },
+                          "max": {
+                            "__type": "numpy.ndarray",
+                            "__contents": [
+                              1.3716800212860107,
+                              1.9455336332321167,
+                              1.0519897937774658,
+                              0.7461483478546143,
+                              1.8330590724945068,
+                              1.1632189750671387,
+                              2.2379047870635986,
+                              1.4165658950805664,
+                              1.08860445022583,
+                              1.8303911685943604,
+                              1.4483258724212646,
+                              0.5231671929359436,
+                              1.310941457748413,
+                              1.9063489437103271,
+                              1.3541897535324097,
+                              2.400371551513672,
+                              0.924262285232544,
+                              0.6863187551498413,
+                              0.6007704734802246,
+                              1.4520952701568604,
+                              0.5291010141372681,
+                              1.543238639831543,
+                              2.3424129486083984,
+                              2.252406597137451,
+                              2.5244245529174805,
+                              0.45631974935531616,
+                              1.708998680114746,
+                              0.3844859004020691,
+                              1.2597308158874512,
+                              1.6475789546966553,
+                              0.871279239654541,
+                              0.9150876998901367
+                            ],
+                            "__dtype": "float32"
+                          }
+                        },
+                        {
+                          "min": {
+                            "__type": "numpy.ndarray",
+                            "__contents": [
+                              -1.8191109895706177,
+                              -1.8191109895706177,
+                              -1.8191109895706177,
+                              -1.8191109895706177,
+                              -1.8191109895706177,
+                              -1.8191109895706177
+                            ],
+                            "__dtype": "float64"
+                          },
+                          "max": {
+                            "__type": "numpy.ndarray",
+                            "__contents": [
+                              2.2634429931640625,
+                              2.5244245529174805,
+                              2.4362034797668457,
+                              2.4709465503692627,
+                              2.403010845184326,
+                              2.5038681030273438
+                            ],
+                            "__dtype": "float32"
+                          }
+                        },
+                        {
+                          "min": {
+                            "__type": "numpy.ndarray",
+                            "__contents": [
+                              -1.8191109895706177,
+                              -1.8191109895706177,
+                              -1.8191109895706177,
+                              -1.8191109895706177,
+                              -1.8191109895706177,
+                              -1.8191109895706177
+                            ],
+                            "__dtype": "float64"
+                          },
+                          "max": {
+                            "__type": "numpy.ndarray",
+                            "__contents": [
+                              1.454895257949829,
+                              2.4209916591644287,
+                              2.4859728813171387,
+                              2.5190789699554443,
+                              2.5244245529174805,
+                              2.500492811203003
+                            ],
+                            "__dtype": "float32"
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                },
+                "NodeId_DEPTHWISE_CONV_2D_0_0_fusion###DEPTHWISE_CONV_2D_0_0_activation": {
+                  "range_in": [],
+                  "range_out": [
+                    {
+                      "min": 0.0,
+                      "max": 2.5244245529174805,
+                      "per_axis": [
+                        {
+                          "min": {
+                            "__type": "numpy.ndarray",
+                            "__contents": [
+                              0.0,
+                              0.0,
+                              0.0,
+                              0.0,
+                              0.0,
+                              0.0,
+                              0.0,
+                              0.0,
+                              0.0,
+                              0.0,
+                              0.0,
+                              0.0,
+                              0.0,
+                              0.0,
+                              0.0,
+                              0.0,
+                              0.0,
+                              0.0,
+                              0.0,
+                              0.0,
+                              0.0,
+                              0.0,
+                              0.0,
+                              0.0,
+                              0.0,
+                              0.0,
+                              0.0,
+                              0.0,
+                              0.0,
+                              0.0,
+                              0.0,
+                              0.0
+                            ],
+                            "__dtype": "float64"
+                          },
+                          "max": {
+                            "__type": "numpy.ndarray",
+                            "__contents": [
+                              1.3716800212860107,
+                              1.9455336332321167,
+                              1.0519897937774658,
+                              0.7461483478546143,
+                              1.8330590724945068,
+                              1.1632189750671387,
+                              2.2379047870635986,
+                              1.4165658950805664,
+                              1.08860445022583,
+                              1.8303911685943604,
+                              1.4483258724212646,
+                              0.5231671929359436,
+                              1.310941457748413,
+                              1.9063489437103271,
+                              1.3541897535324097,
+                              2.400371551513672,
+                              0.924262285232544,
+                              0.6863187551498413,
+                              0.6007704734802246,
+                              1.4520952701568604,
+                              0.5291010141372681,
+                              1.543238639831543,
+                              2.3424129486083984,
+                              2.252406597137451,
+                              2.5244245529174805,
+                              0.45631974935531616,
+                              1.708998680114746,
+                              0.3844859004020691,
+                              1.2597308158874512,
+                              1.6475789546966553,
+                              0.871279239654541,
+                              0.9150876998901367
+                            ],
+                            "__dtype": "float32"
+                          }
+                        },
+                        {
+                          "min": {
+                            "__type": "numpy.ndarray",
+                            "__contents": [
+                              0.0,
+                              0.0,
+                              0.0,
+                              0.0,
+                              0.0,
+                              0.0
+                            ],
+                            "__dtype": "float64"
+                          },
+                          "max": {
+                            "__type": "numpy.ndarray",
+                            "__contents": [
+                              2.2634429931640625,
+                              2.5244245529174805,
+                              2.4362034797668457,
+                              2.4709465503692627,
+                              2.403010845184326,
+                              2.5038681030273438
+                            ],
+                            "__dtype": "float32"
+                          }
+                        },
+                        {
+                          "min": {
+                            "__type": "numpy.ndarray",
+                            "__contents": [
+                              0.0,
+                              0.0,
+                              0.0,
+                              0.0,
+                              0.0,
+                              0.0
+                            ],
+                            "__dtype": "float64"
+                          },
+                          "max": {
+                            "__type": "numpy.ndarray",
+                            "__contents": [
+                              1.454895257949829,
+                              2.4209916591644287,
+                              2.4859728813171387,
+                              2.5190789699554443,
+                              2.5244245529174805,
+                              2.500492811203003
+                            ],
+                            "__dtype": "float32"
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                },
+                "NodeId_DEPTHWISE_CONV_2D_0_0_fusion###": {
+                  "range_in": [
+                    {
+                      "min": -1.0,
+                      "max": 0.9921875,
+                      "per_axis": [
+                        {
+                          "min": {
+                            "__type": "numpy.ndarray",
+                            "__contents": [
+                              -1.0
+                            ],
+                            "__dtype": "float64"
+                          },
+                          "max": {
+                            "__type": "numpy.ndarray",
+                            "__contents": [
+                              0.9921875
+                            ],
+                            "__dtype": "float64"
+                          }
+                        },
+                        {
+                          "min": {
+                            "__type": "numpy.ndarray",
+                            "__contents": [
+                              -1.0,
+                              -1.0,
+                              -1.0,
+                              -1.0,
+                              -1.0,
+                              -1.0,
+                              -1.0,
+                              -1.0,
+                              -1.0,
+                              -1.0,
+                              -1.0,
+                              -1.0,
+                              -1.0,
+                              -1.0,
+                              -1.0,
+                              -1.0,
+                              -1.0,
+                              -1.0,
+                              -1.0,
+                              -1.0,
+                              -1.0,
+                              -1.0,
+                              -1.0,
+                              -1.0,
+                              -1.0,
+                              -1.0,
+                              -1.0,
+                              -1.0
+                            ],
+                            "__dtype": "float64"
+                          },
+                          "max": {
+                            "__type": "numpy.ndarray",
+                            "__contents": [
+                              -1.0,
+                              -1.0,
+                              0.9921875,
+                              0.9765625,
+                              0.9921875,
+                              0.9921875,
+                              0.9921875,
+                              0.9921875,
+                              0.9921875,
+                              0.9921875,
+                              0.9921875,
+                              0.9921875,
+                              0.9921875,
+                              0.9921875,
+                              0.9921875,
+                              0.9921875,
+                              0.9921875,
+                              0.9921875,
+                              0.9921875,
+                              0.9921875,
+                              0.9921875,
+                              0.9921875,
+                              0.9921875,
+                              0.9921875,
+                              0.9921875,
+                              0.9921875,
+                              0.984375,
+                              -1.0
+                            ],
+                            "__dtype": "float64"
+                          }
+                        },
+                        {
+                          "min": {
+                            "__type": "numpy.ndarray",
+                            "__contents": [
+                              -1.0,
+                              -1.0,
+                              -1.0,
+                              -1.0,
+                              -1.0,
+                              -1.0,
+                              -1.0,
+                              -1.0,
+                              -1.0,
+                              -1.0,
+                              -1.0,
+                              -1.0,
+                              -1.0,
+                              -1.0,
+                              -1.0,
+                              -1.0,
+                              -1.0,
+                              -1.0,
+                              -1.0,
+                              -1.0,
+                              -1.0,
+                              -1.0,
+                              -1.0,
+                              -1.0,
+                              -1.0,
+                              -1.0,
+                              -1.0,
+                              -1.0
+                            ],
+                            "__dtype": "float64"
+                          },
+                          "max": {
+                            "__type": "numpy.ndarray",
+                            "__contents": [
+                              -1.0,
+                              -1.0,
+                              -1.0,
+                              0.640625,
+                              0.9921875,
+                              0.9921875,
+                              0.984375,
+                              0.9921875,
+                              0.9921875,
+                              0.9921875,
+                              0.9921875,
+                              0.9921875,
+                              0.9921875,
+                              0.9921875,
+                              0.9921875,
+                              0.9921875,
+                              0.9921875,
+                              0.9921875,
+                              0.9921875,
+                              0.9921875,
+                              0.9921875,
+                              0.9921875,
+                              0.9921875,
+                              0.9921875,
+                              0.7265625,
+                              0.7734375,
+                              -0.359375,
+                              -1.0
+                            ],
+                            "__dtype": "float64"
+                          }
+                        }
+                      ]
+                    }
+                  ],
+                  "range_out": [
+                    {
+                      "min": 0.0,
+                      "max": 2.5244245529174805,
+                      "per_axis": [
+                        {
+                          "min": {
+                            "__type": "numpy.ndarray",
+                            "__contents": [
+                              0.0,
+                              0.0,
+                              0.0,
+                              0.0,
+                              0.0,
+                              0.0,
+                              0.0,
+                              0.0,
+                              0.0,
+                              0.0,
+                              0.0,
+                              0.0,
+                              0.0,
+                              0.0,
+                              0.0,
+                              0.0,
+                              0.0,
+                              0.0,
+                              0.0,
+                              0.0,
+                              0.0,
+                              0.0,
+                              0.0,
+                              0.0,
+                              0.0,
+                              0.0,
+                              0.0,
+                              0.0,
+                              0.0,
+                              0.0,
+                              0.0,
+                              0.0
+                            ],
+                            "__dtype": "float64"
+                          },
+                          "max": {
+                            "__type": "numpy.ndarray",
+                            "__contents": [
+                              1.3716800212860107,
+                              1.9455336332321167,
+                              1.0519897937774658,
+                              0.7461483478546143,
+                              1.8330590724945068,
+                              1.1632189750671387,
+                              2.2379047870635986,
+                              1.4165658950805664,
+                              1.08860445022583,
+                              1.8303911685943604,
+                              1.4483258724212646,
+                              0.5231671929359436,
+                              1.310941457748413,
+                              1.9063489437103271,
+                              1.3541897535324097,
+                              2.400371551513672,
+                              0.924262285232544,
+                              0.6863187551498413,
+                              0.6007704734802246,
+                              1.4520952701568604,
+                              0.5291010141372681,
+                              1.543238639831543,
+                              2.3424129486083984,
+                              2.252406597137451,
+                              2.5244245529174805,
+                              0.45631974935531616,
+                              1.708998680114746,
+                              0.3844859004020691,
+                              1.2597308158874512,
+                              1.6475789546966553,
+                              0.871279239654541,
+                              0.9150876998901367
+                            ],
+                            "__dtype": "float32"
+                          }
+                        },
+                        {
+                          "min": {
+                            "__type": "numpy.ndarray",
+                            "__contents": [
+                              0.0,
+                              0.0,
+                              0.0,
+                              0.0,
+                              0.0,
+                              0.0
+                            ],
+                            "__dtype": "float64"
+                          },
+                          "max": {
+                            "__type": "numpy.ndarray",
+                            "__contents": [
+                              2.2634429931640625,
+                              2.5244245529174805,
+                              2.4362034797668457,
+                              2.4709465503692627,
+                              2.403010845184326,
+                              2.5038681030273438
+                            ],
+                            "__dtype": "float32"
+                          }
+                        },
+                        {
+                          "min": {
+                            "__type": "numpy.ndarray",
+                            "__contents": [
+                              0.0,
+                              0.0,
+                              0.0,
+                              0.0,
+                              0.0,
+                              0.0
+                            ],
+                            "__dtype": "float64"
+                          },
+                          "max": {
+                            "__type": "numpy.ndarray",
+                            "__contents": [
+                              1.454895257949829,
+                              2.4209916591644287,
+                              2.4859728813171387,
+                              2.5190789699554443,
+                              2.5244245529174805,
+                              2.500492811203003
+                            ],
+                            "__dtype": "float32"
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                },
+                "NodeId_CONV_2D_0_2_fusion###CONV_2D_0_2": {
+                  "range_in": [],
+                  "range_out": [
+                    {
+                      "min": -5.462204456329346,
+                      "max": 7.010040283203125,
+                      "per_axis": [
+                        {
+                          "min": {
+                            "__type": "numpy.ndarray",
+                            "__contents": [
+                              -1.4737248420715332,
+                              -2.64601993560791,
+                              -2.2919585704803467,
+                              -2.38307523727417,
+                              -1.9680674076080322,
+                              -3.6633384227752686,
+                              -1.314956545829773,
+                              -3.1484858989715576,
+                              -4.248023509979248,
+                              -1.7826520204544067,
+                              -2.343600034713745,
+                              -4.095787048339844,
+                              -3.9121930599212646,
+                              -4.050220966339111,
+                              -3.7379813194274902,
+                              -4.124027252197266,
+                              -5.462204456329346,
+                              -2.6753180027008057,
+                              -2.3233542442321777,
+                              -2.849260091781616,
+                              -3.6263504028320312,
+                              -1.9916938543319702,
+                              -1.6123143434524536,
+                              -3.2512545585632324,
+                              -1.588025689125061,
+                              -2.2670767307281494,
+                              -3.7597107887268066,
+                              -3.2755398750305176,
+                              -3.633056402206421,
+                              -3.053936004638672,
+                              -4.7568230628967285,
+                              -3.2795629501342773,
+                              -2.3195176124572754,
+                              -3.256897449493408,
+                              -2.4559969902038574,
+                              -2.943843126296997,
+                              -3.0743846893310547,
+                              -4.3567914962768555,
+                              -3.4121737480163574,
+                              -2.129723072052002,
+                              -2.617331027984619,
+                              -3.737306594848633,
+                              -3.0899102687835693,
+                              -3.660186290740967,
+                              -2.5836100578308105,
+                              -1.5006457567214966,
+                              -1.9784578084945679,
+                              -2.8942644596099854,
+                              -3.334320545196533,
+                              -3.585946798324585,
+                              -0.7449204921722412,
+                              -2.4416821002960205,
+                              -3.6640288829803467,
+                              -2.5878074169158936,
+                              -2.013105869293213,
+                              -2.730762243270874,
+                              -2.820565938949585,
+                              -2.789435386657715,
+                              -1.5789560079574585,
+                              -2.368530750274658,
+                              -2.928225040435791,
+                              -2.2096118927001953,
+                              -2.239229679107666,
+                              -3.026477575302124
+                            ],
+                            "__dtype": "float64"
+                          },
+                          "max": {
+                            "__type": "numpy.ndarray",
+                            "__contents": [
+                              3.693966865539551,
+                              4.914323329925537,
+                              4.807666778564453,
+                              2.5302271842956543,
+                              3.9081501960754395,
+                              5.756996154785156,
+                              2.230410099029541,
+                              4.7258734703063965,
+                              4.053497314453125,
+                              3.0545787811279297,
+                              6.061121940612793,
+                              4.059237003326416,
+                              2.9282939434051514,
+                              2.372227430343628,
+                              3.1242563724517822,
+                              3.0339818000793457,
+                              3.194610118865967,
+                              4.738587856292725,
+                              3.2532923221588135,
+                              5.343254089355469,
+                              2.8800148963928223,
+                              3.274650812149048,
+                              3.8104097843170166,
+                              4.138327598571777,
+                              4.189961910247803,
+                              4.994387626647949,
+                              4.013753890991211,
+                              4.27372932434082,
+                              5.523098945617676,
+                              3.965848207473755,
+                              2.648585081100464,
+                              4.532670974731445,
+                              5.126862525939941,
+                              3.3074076175689697,
+                              0.009440183639526367,
+                              4.152134418487549,
+                              2.803945779800415,
+                              5.15324592590332,
+                              4.218161106109619,
+                              0.02166593074798584,
+                              3.292775869369507,
+                              3.7833657264709473,
+                              4.829553604125977,
+                              2.2958574295043945,
+                              3.560189962387085,
+                              3.8417301177978516,
+                              0.627191424369812,
+                              2.9852921962738037,
+                              1.7752766609191895,
+                              5.122651100158691,
+                              4.404233455657959,
+                              3.6329429149627686,
+                              4.515624523162842,
+                              2.2288269996643066,
+                              3.5990002155303955,
+                              2.5071287155151367,
+                              2.1861565113067627,
+                              3.106494188308716,
+                              0.041568271815776825,
+                              3.8892180919647217,
+                              3.3743765354156494,
+                              7.010040283203125,
+                              4.277458190917969,
+                              2.4596457481384277
+                            ],
+                            "__dtype": "float32"
+                          }
+                        },
+                        {
+                          "min": {
+                            "__type": "numpy.ndarray",
+                            "__contents": [
+                              -4.146459579467773,
+                              -5.05258321762085,
+                              -4.3567914962768555,
+                              -5.462204456329346
+                            ],
+                            "__dtype": "float64"
+                          },
+                          "max": {
+                            "__type": "numpy.ndarray",
+                            "__contents": [
+                              4.912897109985352,
+                              6.753035545349121,
+                              6.187759876251221,
+                              7.010040283203125
+                            ],
+                            "__dtype": "float32"
+                          }
+                        },
+                        {
+                          "min": {
+                            "__type": "numpy.ndarray",
+                            "__contents": [
+                              -4.3567914962768555,
+                              -5.098237991333008,
+                              -5.05258321762085,
+                              -5.462204456329346
+                            ],
+                            "__dtype": "float64"
+                          },
+                          "max": {
+                            "__type": "numpy.ndarray",
+                            "__contents": [
+                              3.9753706455230713,
+                              5.756996154785156,
+                              6.541721343994141,
+                              7.010040283203125
+                            ],
+                            "__dtype": "float32"
+                          }
+                        }
+                      ]
+                    }
+                  ],
+                  "range_acc": {
+                    "min": -5.462204456329346,
+                    "max": 7.300833225250244
+                  }
+                },
+                "NodeId_CONV_2D_0_2_fusion###MAX_POOL_2D_0_3": {
+                  "range_in": [],
+                  "range_out": [
+                    {
+                      "min": -2.854511022567749,
+                      "max": 7.010040283203125,
+                      "per_axis": [
+                        {
+                          "min": {
+                            "__type": "numpy.ndarray",
+                            "__contents": [
+                              -0.9898905754089355,
+                              -1.4064568281173706,
+                              -1.1364409923553467,
+                              -0.7052055597305298,
+                              -0.36102187633514404,
+                              -1.2956130504608154,
+                              -0.4777880311012268,
+                              -1.006338357925415,
+                              -0.8460977673530579,
+                              -0.7685160040855408,
+                              -0.9847893118858337,
+                              -1.3802498579025269,
+                              -2.069355010986328,
+                              -2.187494993209839,
+                              -1.997302532196045,
+                              -2.1223740577697754,
+                              -2.854511022567749,
+                              -0.3968755006790161,
+                              -0.7632937431335449,
+                              -0.3961259722709656,
+                              -0.8212100267410278,
+                              -0.7083384394645691,
+                              -0.6155726909637451,
+                              -0.7683483362197876,
+                              -0.19436779618263245,
+                              -0.7074365615844727,
+                              -0.7548602819442749,
+                              -1.3117042779922485,
+                              -1.3432095050811768,
+                              -0.7360250949859619,
+                              -1.7856464385986328,
+                              -0.7243129014968872,
+                              -0.396693617105484,
+                              -0.6853994131088257,
+                              -1.3878998756408691,
+                              -0.6965843439102173,
+                              -1.3816789388656616,
+                              -2.004997491836548,
+                              -1.8182700872421265,
+                              -1.3064651489257812,
+                              -0.8590818047523499,
+                              -1.3291499614715576,
+                              -1.0978872776031494,
+                              -1.7166352272033691,
+                              -1.0905389785766602,
+                              -0.3573267459869385,
+                              -1.441068410873413,
+                              -1.0213725566864014,
+                              -1.0968410968780518,
+                              -0.5695862770080566,
+                              -0.22222800552845,
+                              -0.8588377237319946,
+                              -1.2174150943756104,
+                              -0.7998862266540527,
+                              -0.3071921169757843,
+                              -0.8244051933288574,
+                              -1.0582599639892578,
+                              -0.6739440560340881,
+                              -0.8424060940742493,
+                              -0.9030830264091492,
+                              -0.6147661209106445,
+                              -0.18233048915863037,
+                              -0.998831570148468,
+                              -0.37209299206733704
+                            ],
+                            "__dtype": "float64"
+                          },
+                          "max": {
+                            "__type": "numpy.ndarray",
+                            "__contents": [
+                              3.693966865539551,
+                              4.914323329925537,
+                              4.807666778564453,
+                              2.5302271842956543,
+                              3.9081501960754395,
+                              5.756996154785156,
+                              2.230410099029541,
+                              4.7258734703063965,
+                              4.053497314453125,
+                              3.0545787811279297,
+                              6.061121940612793,
+                              4.059237003326416,
+                              2.9282939434051514,
+                              2.372227430343628,
+                              3.1242563724517822,
+                              3.0339818000793457,
+                              3.194610118865967,
+                              4.738587856292725,
+                              3.2532923221588135,
+                              5.343254089355469,
+                              2.8800148963928223,
+                              3.274650812149048,
+                              3.8104097843170166,
+                              4.138327598571777,
+                              4.189961910247803,
+                              4.994387626647949,
+                              4.013753890991211,
+                              4.27372932434082,
+                              5.523098945617676,
+                              3.965848207473755,
+                              2.648585081100464,
+                              4.532670974731445,
+                              5.126862525939941,
+                              3.3074076175689697,
+                              0.009440183639526367,
+                              4.152134418487549,
+                              2.803945779800415,
+                              5.15324592590332,
+                              4.218161106109619,
+                              0.02166593074798584,
+                              3.292775869369507,
+                              3.7833657264709473,
+                              4.829553604125977,
+                              2.2958574295043945,
+                              3.560189962387085,
+                              3.8417301177978516,
+                              0.627191424369812,
+                              2.9852921962738037,
+                              1.7752766609191895,
+                              5.122651100158691,
+                              4.404233455657959,
+                              3.6329429149627686,
+                              4.515624523162842,
+                              2.2288269996643066,
+                              3.5990002155303955,
+                              2.5071287155151367,
+                              2.1861565113067627,
+                              3.106494188308716,
+                              0.041568271815776825,
+                              3.8892180919647217,
+                              3.3743765354156494,
+                              7.010040283203125,
+                              4.277458190917969,
+                              2.4596457481384277
+                            ],
+                            "__dtype": "float32"
+                          }
+                        },
+                        {
+                          "min": {
+                            "__type": "numpy.ndarray",
+                            "__contents": [
+                              -2.854511022567749,
+                              -2.7040793895721436
+                            ],
+                            "__dtype": "float64"
+                          },
+                          "max": {
+                            "__type": "numpy.ndarray",
+                            "__contents": [
+                              6.753035545349121,
+                              7.010040283203125
+                            ],
+                            "__dtype": "float32"
+                          }
+                        },
+                        {
+                          "min": {
+                            "__type": "numpy.ndarray",
+                            "__contents": [
+                              -2.3129796981811523,
+                              -2.854511022567749
+                            ],
+                            "__dtype": "float64"
+                          },
+                          "max": {
+                            "__type": "numpy.ndarray",
+                            "__contents": [
+                              5.756996154785156,
+                              7.010040283203125
+                            ],
+                            "__dtype": "float32"
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                },
+                "NodeId_CONV_2D_0_2_fusion###CONV_2D_0_2_activation": {
+                  "range_in": [],
+                  "range_out": [
+                    {
+                      "min": 0.0,
+                      "max": 7.010040283203125,
+                      "per_axis": [
+                        {
+                          "min": {
+                            "__type": "numpy.ndarray",
+                            "__contents": [
+                              0.0,
+                              0.0,
+                              0.0,
+                              0.0,
+                              0.0,
+                              0.0,
+                              0.0,
+                              0.0,
+                              0.0,
+                              0.0,
+                              0.0,
+                              0.0,
+                              0.0,
+                              0.0,
+                              0.0,
+                              0.0,
+                              0.0,
+                              0.0,
+                              0.0,
+                              0.0,
+                              0.0,
+                              0.0,
+                              0.0,
+                              0.0,
+                              0.0,
+                              0.0,
+                              0.0,
+                              0.0,
+                              0.0,
+                              0.0,
+                              0.0,
+                              0.0,
+                              0.0,
+                              0.0,
+                              0.0,
+                              0.0,
+                              0.0,
+                              0.0,
+                              0.0,
+                              0.0,
+                              0.0,
+                              0.0,
+                              0.0,
+                              0.0,
+                              0.0,
+                              0.0,
+                              0.0,
+                              0.0,
+                              0.0,
+                              0.0,
+                              0.0,
+                              0.0,
+                              0.0,
+                              0.0,
+                              0.0,
+                              0.0,
+                              0.0,
+                              0.0,
+                              0.0,
+                              0.0,
+                              0.0,
+                              0.0,
+                              0.0,
+                              0.0
+                            ],
+                            "__dtype": "float64"
+                          },
+                          "max": {
+                            "__type": "numpy.ndarray",
+                            "__contents": [
+                              3.693966865539551,
+                              4.914323329925537,
+                              4.807666778564453,
+                              2.5302271842956543,
+                              3.9081501960754395,
+                              5.756996154785156,
+                              2.230410099029541,
+                              4.7258734703063965,
+                              4.053497314453125,
+                              3.0545787811279297,
+                              6.061121940612793,
+                              4.059237003326416,
+                              2.9282939434051514,
+                              2.372227430343628,
+                              3.1242563724517822,
+                              3.0339818000793457,
+                              3.194610118865967,
+                              4.738587856292725,
+                              3.2532923221588135,
+                              5.343254089355469,
+                              2.8800148963928223,
+                              3.274650812149048,
+                              3.8104097843170166,
+                              4.138327598571777,
+                              4.189961910247803,
+                              4.994387626647949,
+                              4.013753890991211,
+                              4.27372932434082,
+                              5.523098945617676,
+                              3.965848207473755,
+                              2.648585081100464,
+                              4.532670974731445,
+                              5.126862525939941,
+                              3.3074076175689697,
+                              0.009440183639526367,
+                              4.152134418487549,
+                              2.803945779800415,
+                              5.15324592590332,
+                              4.218161106109619,
+                              0.02166593074798584,
+                              3.292775869369507,
+                              3.7833657264709473,
+                              4.829553604125977,
+                              2.2958574295043945,
+                              3.560189962387085,
+                              3.8417301177978516,
+                              0.627191424369812,
+                              2.9852921962738037,
+                              1.7752766609191895,
+                              5.122651100158691,
+                              4.404233455657959,
+                              3.6329429149627686,
+                              4.515624523162842,
+                              2.2288269996643066,
+                              3.5990002155303955,
+                              2.5071287155151367,
+                              2.1861565113067627,
+                              3.106494188308716,
+                              0.041568271815776825,
+                              3.8892180919647217,
+                              3.3743765354156494,
+                              7.010040283203125,
+                              4.277458190917969,
+                              2.4596457481384277
+                            ],
+                            "__dtype": "float32"
+                          }
+                        },
+                        {
+                          "min": {
+                            "__type": "numpy.ndarray",
+                            "__contents": [
+                              0.0,
+                              0.0
+                            ],
+                            "__dtype": "float64"
+                          },
+                          "max": {
+                            "__type": "numpy.ndarray",
+                            "__contents": [
+                              6.753035545349121,
+                              7.010040283203125
+                            ],
+                            "__dtype": "float32"
+                          }
+                        },
+                        {
+                          "min": {
+                            "__type": "numpy.ndarray",
+                            "__contents": [
+                              0.0,
+                              0.0
+                            ],
+                            "__dtype": "float64"
+                          },
+                          "max": {
+                            "__type": "numpy.ndarray",
+                            "__contents": [
+                              5.756996154785156,
+                              7.010040283203125
+                            ],
+                            "__dtype": "float32"
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                },
+                "NodeId_CONV_2D_0_2_fusion###": {
+                  "range_in": [
+                    {
+                      "min": 0.0,
+                      "max": 2.5244245529174805,
+                      "per_axis": [
+                        {
+                          "min": {
+                            "__type": "numpy.ndarray",
+                            "__contents": [
+                              0.0,
+                              0.0,
+                              0.0,
+                              0.0,
+                              0.0,
+                              0.0,
+                              0.0,
+                              0.0,
+                              0.0,
+                              0.0,
+                              0.0,
+                              0.0,
+                              0.0,
+                              0.0,
+                              0.0,
+                              0.0,
+                              0.0,
+                              0.0,
+                              0.0,
+                              0.0,
+                              0.0,
+                              0.0,
+                              0.0,
+                              0.0,
+                              0.0,
+                              0.0,
+                              0.0,
+                              0.0,
+                              0.0,
+                              0.0,
+                              0.0,
+                              0.0
+                            ],
+                            "__dtype": "float64"
+                          },
+                          "max": {
+                            "__type": "numpy.ndarray",
+                            "__contents": [
+                              1.3716800212860107,
+                              1.9455336332321167,
+                              1.0519897937774658,
+                              0.7461483478546143,
+                              1.8330590724945068,
+                              1.1632189750671387,
+                              2.2379047870635986,
+                              1.4165658950805664,
+                              1.08860445022583,
+                              1.8303911685943604,
+                              1.4483258724212646,
+                              0.5231671929359436,
+                              1.310941457748413,
+                              1.9063489437103271,
+                              1.3541897535324097,
+                              2.400371551513672,
+                              0.924262285232544,
+                              0.6863187551498413,
+                              0.6007704734802246,
+                              1.4520952701568604,
+                              0.5291010141372681,
+                              1.543238639831543,
+                              2.3424129486083984,
+                              2.252406597137451,
+                              2.5244245529174805,
+                              0.45631974935531616,
+                              1.708998680114746,
+                              0.3844859004020691,
+                              1.2597308158874512,
+                              1.6475789546966553,
+                              0.871279239654541,
+                              0.9150876998901367
+                            ],
+                            "__dtype": "float32"
+                          }
+                        },
+                        {
+                          "min": {
+                            "__type": "numpy.ndarray",
+                            "__contents": [
+                              0.0,
+                              0.0,
+                              0.0,
+                              0.0,
+                              0.0,
+                              0.0
+                            ],
+                            "__dtype": "float64"
+                          },
+                          "max": {
+                            "__type": "numpy.ndarray",
+                            "__contents": [
+                              2.2634429931640625,
+                              2.5244245529174805,
+                              2.4362034797668457,
+                              2.4709465503692627,
+                              2.403010845184326,
+                              2.5038681030273438
+                            ],
+                            "__dtype": "float32"
+                          }
+                        },
+                        {
+                          "min": {
+                            "__type": "numpy.ndarray",
+                            "__contents": [
+                              0.0,
+                              0.0,
+                              0.0,
+                              0.0,
+                              0.0,
+                              0.0
+                            ],
+                            "__dtype": "float64"
+                          },
+                          "max": {
+                            "__type": "numpy.ndarray",
+                            "__contents": [
+                              1.454895257949829,
+                              2.4209916591644287,
+                              2.4859728813171387,
+                              2.5190789699554443,
+                              2.5244245529174805,
+                              2.500492811203003
+                            ],
+                            "__dtype": "float32"
+                          }
+                        }
+                      ]
+                    }
+                  ],
+                  "range_out": [
+                    {
+                      "min": 0.0,
+                      "max": 7.010040283203125,
+                      "per_axis": [
+                        {
+                          "min": {
+                            "__type": "numpy.ndarray",
+                            "__contents": [
+                              0.0,
+                              0.0,
+                              0.0,
+                              0.0,
+                              0.0,
+                              0.0,
+                              0.0,
+                              0.0,
+                              0.0,
+                              0.0,
+                              0.0,
+                              0.0,
+                              0.0,
+                              0.0,
+                              0.0,
+                              0.0,
+                              0.0,
+                              0.0,
+                              0.0,
+                              0.0,
+                              0.0,
+                              0.0,
+                              0.0,
+                              0.0,
+                              0.0,
+                              0.0,
+                              0.0,
+                              0.0,
+                              0.0,
+                              0.0,
+                              0.0,
+                              0.0,
+                              0.0,
+                              0.0,
+                              0.0,
+                              0.0,
+                              0.0,
+                              0.0,
+                              0.0,
+                              0.0,
+                              0.0,
+                              0.0,
+                              0.0,
+                              0.0,
+                              0.0,
+                              0.0,
+                              0.0,
+                              0.0,
+                              0.0,
+                              0.0,
+                              0.0,
+                              0.0,
+                              0.0,
+                              0.0,
+                              0.0,
+                              0.0,
+                              0.0,
+                              0.0,
+                              0.0,
+                              0.0,
+                              0.0,
+                              0.0,
+                              0.0,
+                              0.0
+                            ],
+                            "__dtype": "float64"
+                          },
+                          "max": {
+                            "__type": "numpy.ndarray",
+                            "__contents": [
+                              3.693966865539551,
+                              4.914323329925537,
+                              4.807666778564453,
+                              2.5302271842956543,
+                              3.9081501960754395,
+                              5.756996154785156,
+                              2.230410099029541,
+                              4.7258734703063965,
+                              4.053497314453125,
+                              3.0545787811279297,
+                              6.061121940612793,
+                              4.059237003326416,
+                              2.9282939434051514,
+                              2.372227430343628,
+                              3.1242563724517822,
+                              3.0339818000793457,
+                              3.194610118865967,
+                              4.738587856292725,
+                              3.2532923221588135,
+                              5.343254089355469,
+                              2.8800148963928223,
+                              3.274650812149048,
+                              3.8104097843170166,
+                              4.138327598571777,
+                              4.189961910247803,
+                              4.994387626647949,
+                              4.013753890991211,
+                              4.27372932434082,
+                              5.523098945617676,
+                              3.965848207473755,
+                              2.648585081100464,
+                              4.532670974731445,
+                              5.126862525939941,
+                              3.3074076175689697,
+                              0.009440183639526367,
+                              4.152134418487549,
+                              2.803945779800415,
+                              5.15324592590332,
+                              4.218161106109619,
+                              0.02166593074798584,
+                              3.292775869369507,
+                              3.7833657264709473,
+                              4.829553604125977,
+                              2.2958574295043945,
+                              3.560189962387085,
+                              3.8417301177978516,
+                              0.627191424369812,
+                              2.9852921962738037,
+                              1.7752766609191895,
+                              5.122651100158691,
+                              4.404233455657959,
+                              3.6329429149627686,
+                              4.515624523162842,
+                              2.2288269996643066,
+                              3.5990002155303955,
+                              2.5071287155151367,
+                              2.1861565113067627,
+                              3.106494188308716,
+                              0.041568271815776825,
+                              3.8892180919647217,
+                              3.3743765354156494,
+                              7.010040283203125,
+                              4.277458190917969,
+                              2.4596457481384277
+                            ],
+                            "__dtype": "float32"
+                          }
+                        },
+                        {
+                          "min": {
+                            "__type": "numpy.ndarray",
+                            "__contents": [
+                              0.0,
+                              0.0
+                            ],
+                            "__dtype": "float64"
+                          },
+                          "max": {
+                            "__type": "numpy.ndarray",
+                            "__contents": [
+                              6.753035545349121,
+                              7.010040283203125
+                            ],
+                            "__dtype": "float32"
+                          }
+                        },
+                        {
+                          "min": {
+                            "__type": "numpy.ndarray",
+                            "__contents": [
+                              0.0,
+                              0.0
+                            ],
+                            "__dtype": "float64"
+                          },
+                          "max": {
+                            "__type": "numpy.ndarray",
+                            "__contents": [
+                              5.756996154785156,
+                              7.010040283203125
+                            ],
+                            "__dtype": "float32"
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                },
+                "NodeId_FULLY_CONNECTED_0_4###": {
+                  "range_in": [
+                    {
+                      "min": 0.0,
+                      "max": 7.010040283203125,
+                      "per_axis": [
+                        {
+                          "min": {
+                            "__type": "numpy.ndarray",
+                            "__contents": [
+                              0.0,
+                              0.0,
+                              0.0,
+                              0.0,
+                              0.0,
+                              0.0,
+                              0.0,
+                              0.0,
+                              0.0,
+                              0.0,
+                              0.0,
+                              0.0,
+                              0.0,
+                              0.0,
+                              0.0,
+                              0.0,
+                              0.0,
+                              0.0,
+                              0.0,
+                              0.0,
+                              0.0,
+                              0.0,
+                              0.0,
+                              0.0,
+                              0.0,
+                              0.0,
+                              0.0,
+                              0.0,
+                              0.0,
+                              0.0,
+                              0.0,
+                              0.0,
+                              0.0,
+                              0.0,
+                              0.0,
+                              0.0,
+                              0.0,
+                              0.0,
+                              0.0,
+                              0.0,
+                              0.0,
+                              0.0,
+                              0.0,
+                              0.0,
+                              0.0,
+                              0.0,
+                              0.0,
+                              0.0,
+                              0.0,
+                              0.0,
+                              0.0,
+                              0.0,
+                              0.0,
+                              0.0,
+                              0.0,
+                              0.0,
+                              0.0,
+                              0.0,
+                              0.0,
+                              0.0,
+                              0.0,
+                              0.0,
+                              0.0,
+                              0.0
+                            ],
+                            "__dtype": "float64"
+                          },
+                          "max": {
+                            "__type": "numpy.ndarray",
+                            "__contents": [
+                              3.693966865539551,
+                              4.914323329925537,
+                              4.807666778564453,
+                              2.5302271842956543,
+                              3.9081501960754395,
+                              5.756996154785156,
+                              2.230410099029541,
+                              4.7258734703063965,
+                              4.053497314453125,
+                              3.0545787811279297,
+                              6.061121940612793,
+                              4.059237003326416,
+                              2.9282939434051514,
+                              2.372227430343628,
+                              3.1242563724517822,
+                              3.0339818000793457,
+                              3.194610118865967,
+                              4.738587856292725,
+                              3.2532923221588135,
+                              5.343254089355469,
+                              2.8800148963928223,
+                              3.274650812149048,
+                              3.8104097843170166,
+                              4.138327598571777,
+                              4.189961910247803,
+                              4.994387626647949,
+                              4.013753890991211,
+                              4.27372932434082,
+                              5.523098945617676,
+                              3.965848207473755,
+                              2.648585081100464,
+                              4.532670974731445,
+                              5.126862525939941,
+                              3.3074076175689697,
+                              0.009440183639526367,
+                              4.152134418487549,
+                              2.803945779800415,
+                              5.15324592590332,
+                              4.218161106109619,
+                              0.02166593074798584,
+                              3.292775869369507,
+                              3.7833657264709473,
+                              4.829553604125977,
+                              2.2958574295043945,
+                              3.560189962387085,
+                              3.8417301177978516,
+                              0.627191424369812,
+                              2.9852921962738037,
+                              1.7752766609191895,
+                              5.122651100158691,
+                              4.404233455657959,
+                              3.6329429149627686,
+                              4.515624523162842,
+                              2.2288269996643066,
+                              3.5990002155303955,
+                              2.5071287155151367,
+                              2.1861565113067627,
+                              3.106494188308716,
+                              0.041568271815776825,
+                              3.8892180919647217,
+                              3.3743765354156494,
+                              7.010040283203125,
+                              4.277458190917969,
+                              2.4596457481384277
+                            ],
+                            "__dtype": "float32"
+                          }
+                        },
+                        {
+                          "min": {
+                            "__type": "numpy.ndarray",
+                            "__contents": [
+                              0.0,
+                              0.0
+                            ],
+                            "__dtype": "float64"
+                          },
+                          "max": {
+                            "__type": "numpy.ndarray",
+                            "__contents": [
+                              6.753035545349121,
+                              7.010040283203125
+                            ],
+                            "__dtype": "float32"
+                          }
+                        },
+                        {
+                          "min": {
+                            "__type": "numpy.ndarray",
+                            "__contents": [
+                              0.0,
+                              0.0
+                            ],
+                            "__dtype": "float64"
+                          },
+                          "max": {
+                            "__type": "numpy.ndarray",
+                            "__contents": [
+                              5.756996154785156,
+                              7.010040283203125
+                            ],
+                            "__dtype": "float32"
+                          }
+                        }
+                      ]
+                    }
+                  ],
+                  "range_out": [
+                    {
+                      "min": -10.963919639587402,
+                      "max": 14.506843566894531,
+                      "per_axis": [
+                        {
+                          "min": {
+                            "__type": "numpy.ndarray",
+                            "__contents": [
+                              -7.862558364868164,
+                              -9.762679100036621,
+                              -5.408380508422852,
+                              -7.836657524108887,
+                              -9.344552040100098,
+                              -7.38516092300415,
+                              -10.963919639587402,
+                              -8.446584701538086,
+                              -5.662161350250244,
+                              -6.97413444519043
+                            ],
+                            "__dtype": "float64"
+                          },
+                          "max": {
+                            "__type": "numpy.ndarray",
+                            "__contents": [
+                              9.493271827697754,
+                              8.987713813781738,
+                              14.506843566894531,
+                              12.696184158325195,
+                              9.287699699401855,
+                              12.869085311889648,
+                              12.596270561218262,
+                              11.35672378540039,
+                              7.0762176513671875,
+                              9.619038581848145
+                            ],
+                            "__dtype": "float32"
+                          }
+                        }
+                      ]
+                    }
+                  ],
+                  "range_acc": {
+                    "min": -10.963919639587402,
+                    "max": 9.619038581848145
+                  }
+                },
+                "NodeId_SOFTMAX_0_5###": {
+                  "range_in": [
+                    {
+                      "min": -10.963919639587402,
+                      "max": 14.506843566894531,
+                      "per_axis": [
+                        {
+                          "min": {
+                            "__type": "numpy.ndarray",
+                            "__contents": [
+                              -7.862558364868164,
+                              -9.762679100036621,
+                              -5.408380508422852,
+                              -7.836657524108887,
+                              -9.344552040100098,
+                              -7.38516092300415,
+                              -10.963919639587402,
+                              -8.446584701538086,
+                              -5.662161350250244,
+                              -6.97413444519043
+                            ],
+                            "__dtype": "float64"
+                          },
+                          "max": {
+                            "__type": "numpy.ndarray",
+                            "__contents": [
+                              9.493271827697754,
+                              8.987713813781738,
+                              14.506843566894531,
+                              12.696184158325195,
+                              9.287699699401855,
+                              12.869085311889648,
+                              12.596270561218262,
+                              11.35672378540039,
+                              7.0762176513671875,
+                              9.619038581848145
+                            ],
+                            "__dtype": "float32"
+                          }
+                        }
+                      ]
+                    }
+                  ],
+                  "range_out": [
+                    {
+                      "min": 1.2107881364187278e-10,
+                      "max": 0.9999990463256836,
+                      "per_axis": [
+                        {
+                          "min": {
+                            "__type": "numpy.ndarray",
+                            "__contents": [
+                              1.54071466695882e-09,
+                              1.4829934502635922e-10,
+                              5.160841709539454e-08,
+                              6.710748845506487e-09,
+                              7.30207005972261e-10,
+                              3.8253546996713794e-09,
+                              1.2107881364187278e-10,
+                              7.264313039989645e-10,
+                              1.241555622755186e-07,
+                              1.7684776976167882e-09
+                            ],
+                            "__dtype": "float64"
+                          },
+                          "max": {
+                            "__type": "numpy.ndarray",
+                            "__contents": [
+                              0.9998531341552734,
+                              0.999319314956665,
+                              0.9999990463256836,
+                              0.9999485015869141,
+                              0.9996615052223206,
+                              0.9999761581420898,
+                              0.9999771118164062,
+                              0.9992754459381104,
+                              0.9971059560775757,
+                              0.9995299577713013
+                            ],
+                            "__dtype": "float32"
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                },
+                "NodeId_output_1###": {
+                  "range_in": [
+                    {
+                      "min": 1.2107881364187278e-10,
+                      "max": 0.9999990463256836,
+                      "per_axis": [
+                        {
+                          "min": {
+                            "__type": "numpy.ndarray",
+                            "__contents": [
+                              1.54071466695882e-09,
+                              1.4829934502635922e-10,
+                              5.160841709539454e-08,
+                              6.710748845506487e-09,
+                              7.30207005972261e-10,
+                              3.8253546996713794e-09,
+                              1.2107881364187278e-10,
+                              7.264313039989645e-10,
+                              1.241555622755186e-07,
+                              1.7684776976167882e-09
+                            ],
+                            "__dtype": "float64"
+                          },
+                          "max": {
+                            "__type": "numpy.ndarray",
+                            "__contents": [
+                              0.9998531341552734,
+                              0.999319314956665,
+                              0.9999990463256836,
+                              0.9999485015869141,
+                              0.9996615052223206,
+                              0.9999761581420898,
+                              0.9999771118164062,
+                              0.9992754459381104,
+                              0.9971059560775757,
+                              0.9995299577713013
+                            ],
+                            "__dtype": "float32"
+                          }
+                        }
+                      ]
+                    }
+                  ],
+                  "range_out": [
+                    {
+                      "min": 1.2107881364187278e-10,
+                      "max": 0.9999990463256836,
+                      "per_axis": [
+                        {
+                          "min": {
+                            "__type": "numpy.ndarray",
+                            "__contents": [
+                              1.54071466695882e-09,
+                              1.4829934502635922e-10,
+                              5.160841709539454e-08,
+                              6.710748845506487e-09,
+                              7.30207005972261e-10,
+                              3.8253546996713794e-09,
+                              1.2107881364187278e-10,
+                              7.264313039989645e-10,
+                              1.241555622755186e-07,
+                              1.7684776976167882e-09
+                            ],
+                            "__dtype": "float64"
+                          },
+                          "max": {
+                            "__type": "numpy.ndarray",
+                            "__contents": [
+                              0.9998531341552734,
+                              0.999319314956665,
+                              0.9999990463256836,
+                              0.9999485015869141,
+                              0.9996615052223206,
+                              0.9999761581420898,
+                              0.9999771118164062,
+                              0.9992754459381104,
+                              0.9971059560775757,
+                              0.9995299577713013
+                            ],
+                            "__dtype": "float32"
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              },
+              "force_width": 8,
+              "quantized_dimension": "channel"
+            }
+          },
+          "NodeId_input_1_formatter###": {
+            "__type": "JsonSerializable",
+            "__module_name": "quantization.multiplicative.mult_quantization",
+            "__class_name": "MultQuantizationRecord",
+            "__contents": {
+              "out_qs": [
+                {
+                  "__type": "JsonSerializable",
+                  "__module_name": "quantization.multiplicative.symmetric.symmetric_mult_qtype",
+                  "__class_name": "SymmetricMultQType",
+                  "__contents": {
+                    "min_val": {
+                      "__type": "numpy.ndarray",
+                      "__contents": [
+                        -1.0
+                      ],
+                      "__dtype": "float64"
+                    },
+                    "max_val": {
+                      "__type": "numpy.ndarray",
+                      "__contents": [
+                        0.9921875
+                      ],
+                      "__dtype": "float64"
+                    },
+                    "scale": {
+                      "__type": "numpy.ndarray",
+                      "__contents": [
+                        0.0078125
+                      ],
+                      "__dtype": "float64"
+                    },
+                    "dim": null,
+                    "narrow_range": false,
+                    "dtype": "int8"
+                  }
+                }
+              ],
+              "in_qs": [
+                {
+                  "__type": "JsonSerializable",
+                  "__module_name": "quantization.multiplicative.asymmetric.asymmetric_mult_qtype",
+                  "__class_name": "AsymmetricMultQType",
+                  "__contents": {
+                    "min_val": null,
+                    "max_val": null,
+                    "scale": {
+                      "__type": "numpy.ndarray",
+                      "__contents": [
+                        1
+                      ],
+                      "__dtype": "int64"
+                    },
+                    "zero_point": {
+                      "__type": "numpy.ndarray",
+                      "__contents": [
+                        0
+                      ],
+                      "__dtype": "int64"
+                    },
+                    "dim": 0,
+                    "dtype": "uint8"
+                  }
+                }
+              ],
+              "quant_mode": "symmetric",
+              "scale_mul_biases_q": null
+            }
+          }
+        }
+      }
+    },
+    "changes": {
+      "__type": "JsonSerializable",
+      "__module_name": "graph.nngraph",
+      "__class_name": "NNGraphChanges",
+      "__contents": {
+        "changes": [],
+        "image_format": {
+          "input_1": {
+            "formatter": "bw8",
+            "normalizer": "offset_int8"
+          }
+        },
+        "input_resizer": {}
+      }
+    }
+  },
+  "node_options": {},
+  "load_parameters": true,
+  "name": "model",
+  "extra": {
+    "default_input_home_location": "AT_MEM_L2",
+    "default_input_exec_location": "AT_MEM_L2",
+    "default_output_home_location": "AT_MEM_L2",
+    "default_output_exec_location": "AT_MEM_L2",
+    "default_global_home_location": "AT_MEM_L3_HFLASH",
+    "default_global_exec_location": "AT_MEM_UNDEF",
+    "default_local_location": "AT_MEM_UNDEF",
+    "l2_ram_ext_managed": true,
+    "l3_ram_ext_managed": false,
+    "l3_flash_ext_managed": false,
+    "generate_checksums": false,
+    "include_project_header": false,
+    "checksum_file": "",
+    "tensor_directory": ".",
+    "model_directory": ".",
+    "model_file": "model.c",
+    "basic_kernel_source_file": "Expression_Kernels.c",
+    "basic_kernel_header_file": "Expression_Kernels.h",
+    "at_ver": 3,
+    "memory_devices": {
+      "__type": "JsonSerializable",
+      "__module_name": "generation.memory_device_info",
+      "__class_name": "MemoryDeviceInfos",
+      "__contents": [
+        {
+          "memory_area": "AT_MEM_L1",
+          "size_var": "L1Memory",
+          "name": "{graphname}_L1_Memory",
+          "ext_managed": false,
+          "filename": null
+        },
+        {
+          "memory_area": "AT_MEM_L2",
+          "size_var": "L2Memory",
+          "name": "{graphname}_L2_Memory",
+          "ext_managed": false,
+          "filename": null
+        },
+        {
+          "memory_area": "AT_MEM_L3_HRAM",
+          "size_var": "L3Memory",
+          "name": "{graphname}_L3_Memory",
+          "ext_managed": 0,
+          "filename": null
+        },
+        {
+          "memory_area": "AT_MEM_L3_HFLASH",
+          "size_var": "L3Flash",
+          "name": "{graphname}_L3_Flash",
+          "ext_managed": 0,
+          "filename": "{graphname}_L3_Flash_Const.dat"
+        }
+      ]
+    },
+    "l3_ram_device": "AT_MEM_L3_HRAM",
+    "l3_flash_device": "AT_MEM_L3_HFLASH",
+    "AT_force_relu": true,
+    "kernel_buffer_promote": true,
+    "kernel_partial_buffer_promote": true,
+    "kernel_nosolution_error": true,
+    "graph_monitor_cycles": true,
+    "graph_monitor_cvar_name": "AT_GraphPerf",
+    "graph_produce_node_names": true,
+    "graph_produce_node_cvar_name": "AT_GraphNodeNames",
+    "graph_produce_operinfos": true,
+    "graph_produce_operinfos_cvar_name": "AT_GraphOperInfosNames",
+    "graph_reorder_constant_in": true,
+    "graph_trace_exec": false,
+    "graph_noinline_node": false,
+    "graph_pref_l3_exec": "AT_MEM_L3_HRAM",
+    "graph_const_exec_from_flash": false,
+    "graph_pref_l3_home": "AT_MEM_L3_HFLASH",
+    "graph_dump_tensor": 0,
+    "graph_dump_one_node": null,
+    "graph_arg2struct": false,
+    "graph_size_opt": 0,
+    "graph_warm_construct": false
+  }
+}
